@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Sne Syn](https://up.htmlacademy.ru/htmlcss/24/user/543355).
-* Наставник: `Неизвестно`.
+* Наставник: [Александр Карташов](https://up.htmlacademy.ru/htmlcss/24/user/77080).
 
 ---
 
