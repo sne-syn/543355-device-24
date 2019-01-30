@@ -55,7 +55,7 @@
 
 
                 <div class="popular__controls">
-                    <label for="product-1">Первый</label>
+                    <label class="popular__controls--active" for="product-1">Первый</label>
                     <label for="product-2">Второй</label>
                     <label for="product-3">Третий</label>
                 </div>
@@ -164,6 +164,8 @@
 
             <div class="formalities__slider wrapper">
 
+              <div class="formalities-slider__controls">
+
                 <input id="delivery" class="visually-hidden" type="radio" name="slider" checked>
                 <input id="guarantee" class="visually-hidden" type="radio" name="slider">
                 <input id="credit" class="visually-hidden" type="radio" name="slider">
@@ -171,6 +173,8 @@
                 <label class="btn formalities-btn" for="delivery" title="Доставка">Доставка</label>
                 <label class="btn formalities-btn" for="guarantee" title="Гарантия">Гарантия</label>
                 <label class="btn formalities-btn" for="credit" title="Кредит">Кредит</label>
+
+              </div>
 
                 <ul class="formalities__list">
                     <li class="formalities__item">
