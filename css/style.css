@@ -160,7 +160,7 @@ a {
   background-repeat: no-repeat;
 }
 
-.user-menu__item:nth-child(2)::before {
+.user-menu__item:nth-last-child(2)::before {
   width: 10px;
   height: 10px;
   background-image: url(../img/compare-black.svg);
