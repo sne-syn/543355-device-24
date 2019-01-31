@@ -212,8 +212,9 @@ a {
 .catalog__title {
   position: relative;
   cursor: pointer;
+  margin-right: 0;
   height: 45px;
-  width: 270px;
+  width: 260px;
 
   font: inherit;
   letter-spacing: 3px;
@@ -244,6 +245,7 @@ a {
 }
 
 .catalog__dropdown {
+  display: flex;
   overflow: hidden;
   max-height: 0;
   padding: 0;
@@ -255,6 +257,13 @@ a {
 
 .catalog:hover .catalog__dropdown {
   min-height: 250px;
+}
+
+.catalog__dropdown--part {
+  width: 232px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .conditions__list {
@@ -389,6 +398,7 @@ a {
 .btn {
   padding: 10px 20px;
   font: inherit;
+  letter-spacing: 3px;
   text-transform: uppercase;
 
   background-image: linear-gradient(to bottom, #ffffff 45%,#f0c52e 45%, #f0c52e 55%, #ffffff 55%);
@@ -422,7 +432,7 @@ a {
 .table__row {
   display: inline-flex;
   flex-direction: column;
-  width: 180px;
+  width: 160px;
 }
 
 .table__cell {
