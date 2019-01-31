@@ -92,9 +92,9 @@ a {
 
 .header__top {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-;
   margin: 0;
-  margin-top: 2px;
+  margin-top: 2px;between
   margin-bottom: 3px;
   margin-left: 60px;
 
@@ -104,10 +104,10 @@ a {
 .search-form {
   display: flex;
   position: relative;
+  width: 525px;
 }
 
 .search-form__input {
-
   padding-left: 40px;
 }
 
@@ -122,17 +122,16 @@ a {
   background-repeat: no-repeat;
 }
 
-
 .search-form__btn {
   display: none;
 }
 
-
 .user-menu__list {
   display: flex;
   flex-wrap: wrap;
-  width: 540px;
-  justify-content: space-around;
+  width: 525px;
+  margin-right: 60px;
+  justify-content: space-between;
 }
 
 .user-menu__item a {
@@ -270,7 +269,7 @@ a {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 540px;
+  width: 525px;
   list-style: none;
 }
 
@@ -284,12 +283,21 @@ a {
   position: relative;
 }
 
+.popular__controls {
+  position: absolute;
+  bottom: 120px;
+  right: 65px;
+  z-index: 20;
+
+  font-size: 0;
+}
+
 .popular__controls label {
 
   display: inline-block;
   width: 10px;
   height: 10px;
-  margin-right: 15px;
+  margin-right: 20px;
 
   vertical-align: top;
 
@@ -312,18 +320,9 @@ a {
 
   background-color: transparent;
   border: 1px solid #000000;
-
   border-radius: 50%;
 }
 
-.popular__controls {
-  position: absolute;
-  bottom: 125px;
-  right: 120px;
-  z-index: 20;
-
-  font-size: 0;
-}
 
 .popular__item {
   display: none;
@@ -398,12 +397,12 @@ a {
 
 .btn a,
 .btn {
-  padding: 10px 20px;
+  padding: 10px 45px;
   font: inherit;
   letter-spacing: 3px;
   text-transform: uppercase;
 
-  background-image: linear-gradient(to bottom, #ffffff 45%,#f0c52e 45%, #f0c52e 55%, #ffffff 55%);
+  background-image: linear-gradient(to bottom, #ffffff 40%,#f0c52e 40%, #f0c52e 60%, #ffffff 60%);
 }
 
 .btn a:hover,
@@ -430,25 +429,23 @@ a {
   flex-direction: column;
   flex-wrap: wrap;
 
-  margin-top: 55px;
+  margin-top: 57px;
 }
 
 .table__row {
   display: inline-flex;
   flex-direction: column;
-  width: 160px;
+  width: 155px;
 }
 
+
 .table__cell {
-  order: 1;
+  order: -1;
+  margin-bottom: 5px;
   font-size: 36px;
   line-height: 48px;
   font-weight: 300;
   font-family: "gilroylight", Arial, sans-serif;
-}
-
-.table__cell {
-  order: -1;
 }
 
 .product__list {
