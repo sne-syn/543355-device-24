@@ -475,7 +475,6 @@ a {
 .product__item a {
   position: relative;
   margin-right: 20px;
-
 }
 
 .product__item a::before {
@@ -664,6 +663,7 @@ a {
   opacity: 0.2;
   filter: alpha(opacity=20);
  }
+
  .brands__item:hover {
   -webkit-filter: grayscale(0);
   filter: grayscale(0);
@@ -921,6 +921,199 @@ a {
   padding: 0;
   padding-left: 100px;
 }
+
+
+.range {
+  display: flex;
+  flex-direction: column;
+
+  width: 300px;
+}
+
+.range__title {
+  margin-bottom: 20px;
+}
+
+.range__cell {
+  /* position: relative; */
+  height: 35px;
+  font-size: 0;
+}
+
+.range__cell label {
+  display: inline-block;
+  vertical-align: top;
+  width: 45%;
+
+  cursor: pointer;
+}
+
+.range__cell input {
+  background-color: #eeeeee;
+  border: none;
+}
+
+.range__controls {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.range__scale {
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.range__bar {
+  width: 50%;
+  height: 2px;
+
+  background-color: #91c92f;
+}
+
+.range__toggle {
+  position: absolute;
+  top: -9px;
+
+  width: 4px;
+  height: 4px;
+
+  background-color: #ababab;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.range-toggle__min {
+  left: 0;
+}
+
+.range-toggle__max {
+  left: 50%;
+}
+
+.checkbox__container {
+  display: flex;
+}
+
+.checkbox__container fieldset {
+  display: flex;
+  flex-direction: column;
+
+  border: none;
+}
+
+.checkbox__legend {
+  margin-bottom: px;
+}
+
+.checkbox__field {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  padding-left: 30px;
+  cursor: pointer;
+}
+
+.checkbox__field input[type="checkbox"] + .checkbox__indication {
+  position: absolute;
+  top: -2px;
+  left: 0;
+
+  width: 19px;
+  height: 19px;
+
+  border: 2px solid #000000;
+  border-radius: 4px;
+}
+
+.checkbox__field input[type="checkbox"]:focus + .checkbox__indication {
+  border: 2px solid rgba(0, 0, 0, 0.6)
+}
+
+.checkbox__field input[type="checkbox"]:disabled + .checkbox__indication {
+  color: rgba(0, 0, 0, 0.2);
+  border: 2px solid rgba(0, 0, 0, 0.2)
+}
+
+.checkbox__field input[type="checkbox"]:checked + .checkbox__indication {
+  width: 27px;
+  height: 37px;
+
+  background-image: url(../img/checkbox-on.svg);
+  background-repeat: no-repeat;
+  background-position: 7% 55%;
+  border: none;
+}
+
+.checkbox__field input[type="checkbox"]:disabled:checked + .checkbox__indication {
+  width: 27px;
+  height: 37px;
+
+  background-image: url(../img/checkbox-on.svg);
+  background-repeat: no-repeat;
+  background-position: 7% 55%;
+  border: none;
+
+  filter: grayscale(100%);
+  opacity: 0.2;
+  filter: alpha(opacity=20);
+}
+
+.radio {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.radio fieldset {
+  display: flex;
+  flex-direction: column;
+  width: 170px;
+
+  border: none;
+}
+
+.radio__field {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+
+  padding-left: 40px;
+
+  cursor: pointer;
+}
+
+.radio__field input[type="radio"] + .radio__button {
+  position: absolute;
+  top: 2px;
+  left: 0px;
+
+  width: 20px;
+  height: 20px;
+
+  border: 4px solid #000000;
+  border-radius: 50%;
+}
+
+.radio__button {
+  position: relative;
+}
+
+.radio__field input[type="radio"]:focus + .radio__button::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 2px;
+  height: 2px;
+
+  background-color: #000000;
+  border: 4px solid #000000;
+  border-radius: 50%;
+
+
+}
+
 
 .filter__btn {
   border: none;
