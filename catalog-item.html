@@ -19,24 +19,31 @@
                 <button type="submit" class="search-form__btn">Найти</button>
             </form>
             <ul class="user-menu__list">
-                <li class="user-menu__item"><a href="#">Валентин Петухов</a></li>
+                <li class="user-menu__item user-menu__item--user"><a href="#">Валентин Петухов</a></li>
                 <li class="user-menu__item user-menu__item--nonactive"><a href="#">Выйти</a></li>
-                <li class="user-menu__item"><a href="#">Сравнить</a></li>
-                <li class="user-menu__item"><a href="#">Корзина</a></li>
+                <li class="user-menu__item user-menu__item--compare"><a href="#">Сравнить</a></li>
+                <li class="user-menu__item user-menu__item--cart"><a href="#">Корзина</a></li>
             </ul>
         </div>
 
         <nav class="navigation">
             <div class="catalog">
                 <p class="catalog__title">Каталог товаров</p>
-                <ul class="catalog__dropdown">
-                    <li class="catalog__item"><a href="#">Виртуальная реальность</a></li>
-                    <li class="catalog__item catalog__item--current"><a href="#0">Моноподы для селфи</a></li>
-                    <li class="catalog__item"><a href="#">Экшн-камеры</a></li>
-                    <li class="catalog__item"><a href="#">Фитнес-браслеты</a></li>
-                    <li class="catalog__item"><a href="#">Умные часы</a></li>
-                    <li class="catalog__item"><a href="#">Квадрокоптеры</a></li>
-                </ul>
+                <div class="catalog__dropdown">
+
+                    <ul class="catalog__dropdown--part">
+                        <li class="catalog__item"><a href="#">Виртуальная реальность</a></li>
+                        <li class="catalog__item"><a href="catalog-item.html">Моноподы для селфи</a></li>
+                        <li class="catalog__item"><a href="#">Экшн-камеры</a></li>
+                    </ul>
+                    <ul class="catalog__dropdown--part">
+                        <li class="catalog__item"><a href="#">Фитнес-браслеты</a></li>
+                        <li class="catalog__item"><a href="#">Умные часы</a></li>
+                    </ul>
+                    <ul class="catalog__dropdown--part">
+                        <li class="catalog__item"><a href="#">Квадрокоптеры</a></li>
+                    </ul>
+                </div>
             </div>
             <ul class="conditions__list">
                 <li class="conditions__item"><a href="#">Доставка</a></li>
@@ -47,7 +54,7 @@
     </header>
 
     <main>
-    <h1 class="inner-page__title">Моноподы для селфи</h1>
+    <h1 class="inner-page__title wrapper">Моноподы для селфи</h1>
     <div class="wrapper">
         <ul class="breadcrumbs__list">
             <li class="breadcrumbs__item"><a href="index.html">Главная</a></li>
@@ -221,10 +228,10 @@
                 <a class="logo logo--orange" href="index.html">DEVICE</a>
                 <h2 class="visually-hidden">Навигация пользователя</h2>
                 <ul class="user-menu__list">
-                    <li class="user-menu__item user-menu__item--light"><a href="#">Валентин Петухов</a></li>
+                    <li class="user-menu__item user-menu__item--light user-menu__item--light--user"><a href="#">Валентин Петухов</a></li>
                     <li class="user-menu__item user-menu__item--light user-menu__item--nonactive-footer"><a href="#">Выйти</a></li>
-                    <li class="user-menu__item user-menu__item--light"><a href="#">Сравнить</a></li>
-                    <li class="user-menu__item user-menu__item--light"><a href="#">Корзина</a></li>
+                    <li class="user-menu__item user-menu__item--light user-menu__item--light--compare"><a href="#" >Сравнить</a></li>
+                    <li class="user-menu__item user-menu__item--light user-menu__item--light--cart"><a href="#">Корзина</a></li>
                 </ul>
             </div>
             <div class="footer__middle">
@@ -240,9 +247,9 @@
             <div class="footer__bottom">
                 <h2 class="visually-hidden">Мы в соцсетях</h2>
                 <ul class="social__list">
-                    <li class="social__btn"><a href="#">Facebook</a></li>
-                    <li class="social__btn"><a href="#">Instagram</a></li>
-                    <li class="social__btn"><a href="#">Twitter</a></li>
+                    <li class="social__btn social__btn--fb"><a href="#">Facebook</a></li>
+                    <li class="social__btn social__btn--insta"><a href="#">Instagram</a></li>
+                    <li class="social__btn social__btn--tw"><a href="#">Twitter</a></li>
                 </ul>
                 <a class="social__copyright" href="https://htmlacademy.ru">HTML Academy</a>
             </div>

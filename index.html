@@ -19,9 +19,9 @@
             </form>
             <h2 class="visually-hidden">Навигация пользователя</h2>
             <ul class="user-menu__list">
-                <li class="user-menu__item"><a href="#">Войти</a></li>
-                <li class="user-menu__item"><a href="#">Сравнить</a></li>
-                <li class="user-menu__item"><a href="#">Корзина</a></li>
+                <li class="user-menu__item user-menu__item--user"><a href="#">Войти</a></li>
+                <li class="user-menu__item user-menu__item--compare"><a href="#">Сравнить</a></li>
+                <li class="user-menu__item user-menu__item--cart"><a href="#">Корзина</a></li>
             </ul>
         </div>
         <nav class="navigation">
@@ -144,24 +144,12 @@
             <section class="product">
                 <h2 class="visually-hidden">Катeгории товаров</h2>
                 <ul class="product__list">
-                    <li class="product__item"><a href="#">
-                            <h3 class="product__title">Виртуальная реальность</h3>
-                        </a></li>
-                    <li class="product__item"><a href="catalog-item.html">
-                            <h3 class="product__title">Моноподы для селфи</h3>
-                        </a></li>
-                    <li class="product__item"><a href="#">
-                            <h3 class="product__title">Экшн-камеры</h3>
-                        </a></li>
-                    <li class="product__item"><a href="#">
-                            <h3 class="product__title">Фитнес-браслеты</h3>
-                        </a></li>
-                    <li class="product__item"><a href="#">
-                            <h3 class="product__title">Умные часы</h3>
-                        </a></li>
-                    <li class="product__item"><a href="#">
-                            <h3 class="product__title">Квадрокоптеры</h3>
-                        </a></li>
+                    <li class="product__item product__item--reality"><a href="#"><h3 class="product__title">Виртуальная реальность</h3></a></li>
+                    <li class="product__item product__item--monopode"><a  href="catalog-item.html"><h3 class="product__title">Моноподы для селфи</h3></a></li>
+                    <li class="product__item product__item--camera" ><a href="#"><h3 class="product__title">Экшн-камеры</h3></a></li>
+                    <li class="product__item product__item--bracelet"><a href="#"><h3 class="product__title">Фитнес-браслеты</h3></a></li>
+                    <li class="product__item product__item--watch"><a href="#"><h3 class="product__title">Умные часы</h3></a></li>
+                    <li class="product__item product__item--quadrocopter"><a href="#"><h3 class="product__title">Квадрокоптеры</h3></a></li>
                 </ul>
             </section>
         </div>
@@ -184,17 +172,17 @@
               </div>
 
                 <ul class="formalities__list">
-                    <li class="formalities__item">
+                    <li class="formalities__item formalities__item--delivery">
                         <h3 class="formalities__title ">Доставка</h3>
                         <p class="formalities__text">Мы с удовольствием доставим ваш товар прямо к вашему подъезду
                             совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж!</p>
                     </li>
-                    <li class="formalities__item">
+                    <li class="formalities__item formalities__item--guarantee">
                         <h3 class="formalities__title">Гарантия</h3>
                         <p class="formalities__text">Если из-за возгорания купленного у нас товара у вас сгорит дом -
                             не переживайте, мы выдадим вам новый.<br> Товар, не дом, конечно же.</p>
                     </li>
-                    <li class="formalities__item">
+                    <li class="formalities__item formalities__item--credit">
                         <h3 class="formalities__title">Кредит</h3>
                         <p class="formalities__text">Залезть в долговую яму стало проще! Кредитные консультанты
                             подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
@@ -243,9 +231,9 @@
                 <a class="logo logo--orange">DEVICE</a>
                 <h2 class="visually-hidden">Навигация пользователя</h2>
                 <ul class="user-menu__list">
-                    <li class="user-menu__item user-menu__item--light"><a href="#">Войти</a></li>
-                    <li class="user-menu__item user-menu__item--light"><a href="#">Сравнить</a></li>
-                    <li class="user-menu__item user-menu__item--light"><a href="#">Корзина</a></li>
+                    <li class="user-menu__item user-menu__item--light user-menu__item--light--user"><a href="#">Войти</a></li>
+                    <li class="user-menu__item user-menu__item--light user-menu__item--light--compare"><a href="#">Сравнить</a></li>
+                    <li class="user-menu__item user-menu__item--light user-menu__item--light--cart"><a href="#">Корзина</a></li>
                 </ul>
             </div>
             <div class="footer__middle">
@@ -259,9 +247,9 @@
             </div>
             <div class="footer__bottom">
                 <ul class="social__list">
-                    <li class="social__btn"><a href="#">Facebook</a></li>
-                    <li class="social__btn"><a href="#" >Instagram</a></li>
-                    <li class="social__btn"><a href="#" >Twitter</a></li>
+                    <li class="social__btn social__btn--fb"><a href="#">Facebook</a></li>
+                    <li class="social__btn social__btn--insta"><a href="#" >Instagram</a></li>
+                    <li class="social__btn social__btn--tw"><a href="#" >Twitter</a></li>
                 </ul>
                 <a class="social__copyright" href="https://htmlacademy.ru">HTML Academy</a>
             </div>
