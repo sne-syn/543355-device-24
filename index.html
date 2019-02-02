@@ -259,13 +259,13 @@
     <section class="modal modal__contact">
         <h2 class="visually-hidden">Напишите нам</h2>
         <form class="modal-contact__form" action="https://echo.htmlacademy.ru" method="post">
-            <label for="user-name">Ваше имя:</label>
+            <label class="modal__username" for="user-name">Ваше имя:</label>
             <input id="user-name" type="text" name="name" placeholder="Имя Фамилия">
 
-            <label for="user-email">Ваш email:</label>
+            <label class="modal__email" for="user-email">Ваш email:</label>
             <input id="user-email" type="text" name="name" placeholder="email@example.com">
 
-            <label for="comment">Текст письма:</label>
+            <label class="modal__text" for="comment">Текст письма:</label>
             <textarea id="comment" name="comment" rows="10" placeholder="В свободной форме"></textarea>
             <button class="btn modal-contact__btn" type="submit">Отправить</button>
         </form>
