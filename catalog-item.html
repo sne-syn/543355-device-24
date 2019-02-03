@@ -54,14 +54,12 @@
     </header>
 
     <main>
-    <h1 class="inner-page__title wrapper">Моноподы для селфи</h1>
-    <div class="wrapper">
+    <h1 class="inner-page__title">Моноподы для селфи</h1>
         <ul class="breadcrumbs__list">
             <li class="breadcrumbs__item"><a href="index.html">Главная</a></li>
             <li class="breadcrumbs__item"><a href="catalog.html">Каталог товаров</a></li>
             <li class="breadcrumbs__item breadcrumbs__item--current">Моноподы для селфи</li>
         </ul>
-    </div>
 
     <div class="content">
 
@@ -155,8 +153,8 @@
                 </ul>
 
                 <ul class="sort-btn__list">
-                    <li class="sort-btn__icon"><a aria-label="Сортировка по возрастанию"></a></li>
-                    <li class="sort-btn__icon sort-btn__icon--active"><a aria-label="Сортировка по убыванию"></a></li>
+                    <li class="sort-btn__icon sort-btn__icon--up"><a aria-label="Сортировка по возрастанию"></a></li>
+                    <li class="sort-btn__icon sort-btn__icon--down sort-btn__icon--active"><a aria-label="Сортировка по убыванию"></a></li>
                 </ul>
 
             </section>
@@ -165,58 +163,74 @@
                 <h2 class="visually-hidden">Результаты поиска</h2>
                 <ul class="category__list">
                     <li class="category__item">
+                      <div class="category__hover-block">
                         <p class="category__image"><img src="img/item-1.jpg" width="360" height="380" alt="«Любительская селфи-палка»"></p>
-                        <a class="category__title" href="#">Любительская селфи-палка</a>
-                        <p class="category__price">500 руб.</p>
                         <div class="category__btn">
                             <a class="category-basket__btn btn" href="#">В корзину</a>
                             <a class="category-compare__btn" href="#">Добавить к сравнению</a>
                         </div>
+                      </div>
+                        <a class="category__title" href="#">Любительская селфи-палка</a>
+                        <p class="category__price">500 руб.</p>
+
                     </li>
 
                     <li class="category__item">
-                        <p class="category__image"><img src="img/item-2.jpg" width="360" height="380" alt="«Профессиональная селфи-палка»"></p>
-                        <a class="category__title" href="#">Профессиональная селфи-палка</a>
-                        <p class="category__price">1 500 руб.</p>
-                        <div class="category-btn">
+
+                        <div class="category__hover-block">
+                        <p class="category__image">
+                          <img src="img/item-2.jpg" width="360" height="380" alt="«Профессиональная селфи-палка»">
+                        </p>
+                        <div class="category__btn">
                             <a class="category-basket__btn btn" href="#">В корзину</a>
                             <a class="category-compare__btn" href="#">Добавить к сравнению</a>
                         </div>
+                        </div>
+                        <a class="category__title" href="#">Профессиональная селфи-палка</a>
+                        <p class="category__price">1 500 руб.</p>
                     </li>
 
                     <li class="category__item">
+                        <div class="category__hover-block">
                         <p class="category__image">
                             <img src="img/item-3.jpg" width="360" height="380" alt="«Непотопляемая селфи-палка»">
                         </p>
-                        <a class="category__title" href="#">Непотопляемая селфи-палка</a>
-                        <p class="category__price">2 500 руб.</p>
                         <div class="category__btn">
                             <a class="category-basket__btn btn" href="#">В корзину</a>
                             <a class="category-compare__btn" href="#">Добавить к сравнению</a>
                         </div>
+                      </div>
+                        <a class="category__title" href="#">Непотопляемая селфи-палка</a>
+                        <p class="category__price">2 500 руб.</p>
+
                     </li>
 
                     <li class="category__item">
+                        <div class="category__hover-block">
                         <p class="category__image">
                             <img src="img/item-4.jpg" width="360" height="380" alt="«Селфи-палка «Следуй за мной»">
                         </p>
-                        <a class="category__title" href="#">Селфи-палка «Следуй за мной»</a>
-                        <p class="category__price">4 500 руб.</p>
                         <div class="category__btn">
                             <a class="category-basket__btn btn" href="#">В корзину</a>
                             <a class="category-compare__btn" href="#">Добавить к сравнению</a>
                         </div>
+                      </div>
+                        <a class="category__title" href="#">Селфи-палка «Следуй за мной»</a>
+                        <p class="category__price">4 500 руб.</p>
+
                     </li>
                 </ul>
             </section>
 
-            <ul class="pagination__list">
-                <li class="pagination__item pagination__prev"><a href="#">Назад</a></li>
-                <li class="pagination__item pagination__item--current"><a href="#">1</a></li>
+            <div class="pagination">
+                <a class="pagination__item pagination__prev" href="#">Назад</a>
+                <ul class="pagination__list">
+                <li class="pagination__item pagination__item--current"><a href="#"></a>1</a></li>
                 <li class="pagination__item"><a href="#">2</a></li>
                 <li class="pagination__item"><a href="#">3</a></li>
-                <li class="pagination__item pagination__next"><a href="#">Вперед</a></li>
-            </ul>
+                </ul>
+                <a class="pagination__item pagination__next" href="#">Вперед</a>
+            </div>
         </div>
 
     </div>
