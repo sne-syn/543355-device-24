@@ -267,6 +267,11 @@ a {
   padding-bottom: 13px;
 }
 
+.catalog {
+  position: relative;
+  width: 250px;
+}
+
 .catalog__title {
   position: relative;
   cursor: pointer;
@@ -294,15 +299,8 @@ a {
   transform: rotate(90deg);
 }
 
-.catalog__item a {
-  font-size: 15px;
-  line-height: 36px;
-  font-weight: 300;
-  font-family: "gilroylight", Arial, sans-serif;
-  color: #000000;
-}
-
 .catalog__dropdown {
+
   display: flex;
   overflow: hidden;
   width: 670px;
@@ -314,7 +312,12 @@ a {
   list-style: none;
 }
 
+.catalog:hover {
+  min-height: 150px;
+}
+
 .catalog:hover .catalog__dropdown {
+  position: absolute;
   min-height: 150px;
 }
 
@@ -323,6 +326,14 @@ a {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.catalog__item a {
+  font-size: 15px;
+  line-height: 36px;
+  font-weight: 300;
+  font-family: "gilroylight", Arial, sans-serif;
+  color: #000000;
 }
 
 .conditions__list {
