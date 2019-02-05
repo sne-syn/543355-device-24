@@ -53,21 +53,21 @@
 
     <main>
         <div class="wrapper">
-            <section class="popular">
+
+            <input class="visually-hidden" type="radio" name="toggle" id="product-1" checked>
+            <input class="visually-hidden" type="radio" name="toggle" id="product-2">
+            <input class="visually-hidden" type="radio" name="toggle" id="product-3">
+
+            <section class="popular__slider">
                 <h2 class="visually-hidden">Популярные товары</h2>
 
-                <input class="visually-hidden" type="radio" name="toggle" id="product-1" checked>
-                <input class="visually-hidden" type="radio" name="toggle" id="product-2">
-                <input class="visually-hidden" type="radio" name="toggle" id="product-3">
-
-
                 <div class="popular__controls">
-                    <label class="popular__controls--active" for="product-1">Первый</label>
+                    <label for="product-1">Первый</label>
                     <label for="product-2">Второй</label>
                     <label for="product-3">Третий</label>
                 </div>
                 <ol class="popular__list">
-                    <li class="popular__item slide" id="slide1">
+                    <li class="popular__item popular__item--monopode slide" id="slide1">
                         <span class="popular__number">01</span>
                         <div class="popular__img">
                             <img src="img/slider-1.png" width="384" height="486" alt="Фото монопода для селфи">
@@ -95,7 +95,7 @@
                         </div>
                     </li>
 
-                    <li class="popular__item slide" id="slide2">
+                    <li class="popular__item popular__item--bracelet slide" id="slide2">
                         <span class="popular__number">02</span>
                         <div class="popular__img">
                             <img src="img/slider-2.png" width="345" height="485" alt="Фото фитнес-браслета">
@@ -115,7 +115,7 @@
                         </div>
                     </li>
 
-                    <li class="popular__item slide" id="slide3">
+                    <li class="popular__item popular__item--quadrocopter slide" id="slide3">
                         <span class="popular__number">03</span>
                         <div class="popular__img">
                             <img src="img/slider-3.png" width="526" height="334" alt="Фото квадрокоптера">
