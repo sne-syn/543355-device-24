@@ -408,7 +408,7 @@ a {
   font-size: 0;
 }
 
-.popular__controls label {
+.popular-controls__element {
   display: inline-block;
   width: 10px;
   height: 10px;
@@ -420,7 +420,7 @@ a {
   cursor: pointer;
 }
 
-.popular__controls label::after {
+.popular-controls__element::after {
   content: "";
   position: absolute;
   top: 4px;
@@ -463,9 +463,9 @@ a {
   margin: 0;
 }
 
-/* #product-1:checked ~ .popular__slider label:before[for="product-1"],
-#product-2:checked ~ .popular__slider label:before[for="product-2"],
-#product-3:checked ~ .popular__slider label:before[for="product-3"] {
+/* #product-1:checked ~ .popular__slider .popular-controls__element[for="product-1"]::before,
+#product-2:checked ~ .popular__slider .popular-controls__element[for="product-2"]::before,
+#product-3:checked ~ .popular__slider .popular-controls__element[for="product-3"]::before {
   content: "";
 
   position: absolute;
@@ -489,8 +489,10 @@ a {
   padding-top: 15px;
 }
 
-.popular__description {
-  width: 580px;
+.popular__item--quadrocopter {
+  padding-left:32px;
+  padding-top: 14px;
+  background-image: linear-gradient(to bottom,  #f7e296 130px, #ffffff 130px,  #ffffff 80%);
 }
 
 .popular__number {
@@ -500,6 +502,14 @@ a {
   font-size: 180px;
   line-height: 180px;
   color: #ffffff;
+}
+
+.popular__item--bracelet .popular__number {
+  right: 49px;
+}
+
+.popular__item--quadrocopter .popular__number {
+  right: 51px;
 }
 
 .popular__item--monopode .popular__img {
@@ -513,11 +523,13 @@ a {
 }
 
 .popular__item--quadrocopter .popular__img {
-  padding: 0;
+  padding-top: 70px;
+  padding-left: 0;
 }
 
 .popular__description {
   position: relative;
+  width: 580px;
   margin-top: 35px;
   margin-left: 126px;
 }
@@ -527,7 +539,8 @@ a {
 }
 
 .popular__item--quadrocopter .popular__description {
-  margin-left: 0;
+  margin-top: 36px;
+  margin-left: 42px;
 }
 
 .popular__description::before {
@@ -547,6 +560,10 @@ a {
   line-height: 56px;
 }
 
+.popular__item--bracelet .popular__title {
+  margin-bottom: 19px;
+}
+
 .popular__text {
   width: 500px;
   margin-bottom: 50px;
@@ -559,10 +576,21 @@ a {
 
 .popular__item--bracelet .popular__text {
   width: 450px;
+  margin-bottom: 51px;
 }
 
+.popular__item--quadrocopter .popular__text {
+  width: 470px;
+  margin-bottom: 51px;
+}
+
+
 .popular__item--bracelet .popular__button {
-  margin-left: 2px;
+  padding-left: 43px;
+}
+
+.popular__item--quadrocopter .popular__button {
+  padding-left: 43px;
 }
 
 .table__header {
@@ -588,6 +616,14 @@ a {
   width: 130px;
 }
 
+.popular__item--bracelet .table__row {
+  width: 160px;
+}
+
+.popular__item--quadrocopter .table__row {
+  width: 155px;
+}
+
 .table__row--length {
   margin-right: 25px;
 }
@@ -610,6 +646,7 @@ a {
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 0;
+  margin-top: 37px;
   padding: 0;
   min-height: 245px;
   list-style: none;
@@ -633,19 +670,19 @@ a {
 .product__item--reality a::before {
   background-image: url(../img/popular-1.svg);
   background-repeat: no-repeat;
-  background-position: 30px 50px;
+  background-position: 32px 52px;
 }
 
 .product__item--monopode a::before {
   background-image: url(../img/popular-2.svg);
   background-repeat: no-repeat;
-  background-position: 35px 50px;
+  background-position: 39px 41px;
 }
 
 .product__item--camera a::before {
   background-image: url(../img/popular-3.svg);
   background-repeat: no-repeat;
-  background-position: 45px 40px;
+  background-position: 50px 38px;
 }
 
 .product__item--bracelet a::before {
@@ -657,7 +694,7 @@ a {
 .product__item--watch a::before {
   background-image: url(../img/popular-5.svg);
   background-repeat: no-repeat;
-  background-position: 50px 25px;
+  background-position: 56px 32px;
 }
 
 .product__item--quadrocopter a::before {
@@ -677,8 +714,17 @@ a {
 
 .product__title {
   width: 160px;
-  margin-top: 230px;
+  margin-top: 232px;
+  margin-bottom: 50px;
   font: inherit;
+}
+
+.product__item--monopode .product__title {
+  width: 120px;
+}
+
+.product__item--monopode {
+  width: 160px;
 }
 
 .formalities {
@@ -689,17 +735,17 @@ a {
 .formalities__slider {
   position: relative;
   display: flex;
-  padding-top: 150px;
-  padding-bottom: 150px;
+  padding-top: 112px;
+  padding-bottom: 100px;
 }
 
 .formalities__slider::after {
   content: "";
   position: absolute;
-  bottom: 100px;
+  bottom: 105px;
   left: 277px;
   width: 7px;
-  height: 255px;
+  height: 319px;
   background-color: #000000;
 }
 
@@ -708,26 +754,45 @@ a {
   display: block;
   width: 120px;
   margin: 0;
-  margin-bottom: 20px;
+  margin-top: 5px;
+  margin-bottom: 23px;
   padding: 10px 20px;
   text-align: left;
   background-image: linear-gradient(to bottom, transparent 40%,#f0c52e 40%, #f0c52e 60%, transparent 60%);
   transition: width, 0.2s ease-in;
 }
 
+.formalities__btn[for="guarantee"] {
+  width: 115px;
+  margin-bottom: 21px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 25px;
+  padding-right: 20px;
+}
+
+.formalities__btn[for="credit"] {
+  width: 103px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 38px;
+  padding-right: 20px;
+}
+
+.formalities__btn--active,
 .formalities__btn:active {
   text-align: left;
   color: #f7e184;
   background-image: linear-gradient(to bottom, #000000 0%, #000000 100%);
-  width: 180px;
+  width: 240px;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 
 .formalities__list {
-  flex-wrap: wrap;
   margin: 0;
   padding: 0;
-  /* padding-top: 75px; */
-  margin-left: 245px;
+  margin-left: 122px;
   width: 550px;
   list-style: none;
 }
@@ -744,6 +809,7 @@ a {
 
 .formalities__title {
   margin: 0;
+  margin-bottom: 30px;
   padding: 0;
   max-width: 460px;
   font-size: 47px;
@@ -751,6 +817,7 @@ a {
 }
 
 .formalities__text {
+  width: 440px;
   font-size: 15px;
   line-height: 30px;
   font-weight: 300;
