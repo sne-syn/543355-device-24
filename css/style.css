@@ -729,20 +729,21 @@ a {
 
 .formalities {
   position:relative;
-  background-image: linear-gradient(#ffffff 170px, #e5e5e5 170px, #e5e5e5 100%);
+  padding-bottom: 42px;
+  background-image: linear-gradient(#ffffff 107px, #e5e5e5 107px, #e5e5e5 100%);
 }
 
 .formalities__slider {
   position: relative;
   display: flex;
-  padding-top: 112px;
-  padding-bottom: 100px;
+  padding-top: 80px;
+  padding-bottom: 70px;
 }
 
 .formalities__slider::after {
   content: "";
   position: absolute;
-  bottom: 105px;
+  bottom: 26px;
   left: 277px;
   width: 7px;
   height: 319px;
@@ -754,7 +755,7 @@ a {
   display: block;
   width: 120px;
   margin: 0;
-  margin-top: 5px;
+  margin-top: 7px;
   margin-bottom: 23px;
   padding: 10px 20px;
   text-align: left;
@@ -792,7 +793,7 @@ a {
 .formalities__list {
   margin: 0;
   padding: 0;
-  margin-left: 122px;
+
   width: 550px;
   list-style: none;
 }
@@ -809,6 +810,7 @@ a {
 
 .formalities__title {
   margin: 0;
+  margin-left: 122px;
   margin-bottom: 30px;
   padding: 0;
   max-width: 460px;
@@ -818,6 +820,7 @@ a {
 
 .formalities__text {
   width: 440px;
+  margin-left: 120px;
   font-size: 15px;
   line-height: 30px;
   font-weight: 300;
@@ -828,8 +831,8 @@ a {
 .formalities__item--delivery::before {
   content: "";
   position: absolute;
-  top: 10px;
-  left: 550px;
+  top: 11px;
+  left: 678px;
   z-index: 1;
   width: 136px;
   height: 164px;
@@ -862,9 +865,10 @@ a {
 .brands__list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   margin: 0;
   padding: 0;
-  padding-top: 100px;
+  padding-top: 95px;
   padding-bottom: 100px;
   list-style: none;
 }
@@ -885,18 +889,20 @@ a {
 
 .main__bottom {
   display: flex;
-  margin-bottom: 85px;
+  justify-content: space-between;
+  margin-bottom: 89px;
 }
 
 .about-us {
   position: relative;
+  width: 600px;
 }
 
 .about-us::after {
   content: "";
   position: absolute;
-  top: 0px;
-  left: 0px;
+  top: -13px;
+  left: 2px;
   width: 80px;
   height: 7px;
   background-color: #000000;
@@ -904,13 +910,15 @@ a {
 
 .contacts {
   position: relative;
+  width: 600px;
+  margin-left: 38px;
 }
 
 .contacts::after {
   content: "";
   position: absolute;
-  top: 0px;
-  left: 0px;
+  top: -13px;
+  left: 2px;
   width: 80px;
   height: 7px;
   background-color: #000000;
@@ -918,6 +926,10 @@ a {
 
 .about-us__title,
 .contacts__title {
+  margin: 0;
+  margin-top: 39px;
+  margin-bottom: 43px;
+  padding: 0;
   font-size: 47px;
   line-height: 48px;
 }
@@ -938,7 +950,8 @@ a {
 }
 
 .about-us__text {
-  padding-bottom: 25px;
+  width: 495px;
+  padding-bottom: 15px;
 }
 
 .about-us__text:last-child {
@@ -946,41 +959,55 @@ a {
 }
 
 .partners__list {
+  font-size: 16px;
+
   list-style: none;
   margin: 0;
-  margin-top: 75px;
-  margin-bottom: 75px;
+  margin-top: 59px;
+  margin-bottom: 70px;
   padding: 0;
-  padding-left: 40px;
+  padding-left: 36px;
 }
 
 .partners__item {
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 .partners__item::before {
   content: "";
   position: absolute;
-  top: 5px;
-  left: -40px;
-  width: 8px;
-  height: 8px;
+  top: 8px;
+  left: -35px;
+  width: 5px;
+  height: 5px;
 
   background-color: transparent;
   border: 2px solid #e6e6e6;
   border-radius: 50%;
 }
 
+.about-us__btn {
+  letter-spacing: 4px;
+  padding-left: 23px;
+  padding-right: 13px;
+}
+
 .contacts__text {
-  margin-bottom: 45px;
+  width: 530px;
+  margin-bottom: 39px;
 }
 
 .contacts__map  img{
   width: 560px;
-  height: 220px;
+  height: 221px;
+  margin-left: 1px;
+  margin-bottom: 73px;
+}
 
-  margin-bottom: 115px;
+.contacts__btn {
+  margin-left: 2px;
+  padding-left: 40px;
 }
 
 .modal__contact {
@@ -1713,17 +1740,18 @@ a {
 .footer {
   background-color: #464646;
   border: 0.1px solid transparent;
-  padding-top: 55px;
+  padding-top: 60px;
   padding-bottom: 65px;
 }
 
 .footer__top {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 35px;
+  margin-bottom: 22px;
 }
 
 .logo--orange {
+  margin-left: -2px;
   color: #ffc600;
 }
 
@@ -1737,15 +1765,30 @@ a {
 
 .footer .user-menu__list {
   flex-wrap: wrap;
-  width: 520px;
+  width: 490px;
   margin: 0;
+  margin-right: -3px;
   padding: 0;
   list-style: none;
+}
 
+.footer .user-menu__item--wide {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 230px;
+  text-align: right;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.user-menu__item--wide .user-user--wide {
+  text-align: right;
+  margin-right: -2px;
 }
 
 .user-menu__item--light {
-  width: 160px;
   text-align: right;
 }
 
@@ -1757,7 +1800,9 @@ a {
   font-family: "Open Sans", Arial, sans-serif;
   color: rgba(255, 255, 255, 0.7);
 }
-.user-menu__item--light--user a::before {
+.user-menu__user--wide a::before{
+  top: 4px;
+  left: -23px;
   width: 13px;
   height: 12px;
   background-image: url(../img/user-orange.svg);
@@ -1765,12 +1810,17 @@ a {
 }
 
 .user-menu__item--light--compare a::before {
+  top: 5px;
+  left: -19px;
   width: 10px;
   height: 10px;
   background-image: url(../img/compare-orange.svg);
   background-repeat: no-repeat;
 }
+
 .user-menu__item--light--cart a::before {
+  top: 4px;
+  left: -22px;
   width: 12px;
   height: 12px;
   background-image: url(../img/cart-orange.svg);
@@ -1778,7 +1828,9 @@ a {
 }
 
 .user-menu__item--nonactive-footer a {
+  margin-left: 17px;
   color: rgba(255, 255, 255, 0.3);
+  background-image: none;
 }
 
 .user-menu__item--light:hover a {
@@ -1791,7 +1843,7 @@ a {
 
 .footer__middle {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   margin-bottom: 60px;
 }
 
@@ -1809,10 +1861,18 @@ a {
 .footer .conditions__list {
   display: flex;
   justify-content: space-between;
+  flex-direction: row;
   flex-wrap: wrap;
-  width: 440px;
+  width: 425px;
   margin: 0;
+  margin-top: 6px;
+  margin-left: 163px;
+  margin-right: 205px;
   padding: 0;
+}
+
+.footer .conditions__item {
+  margin: 0;
 }
 
 .conditions__item--light a {
@@ -1842,7 +1902,8 @@ a {
   content: "";
   position: absolute;
   left: 0;
-  height: 4px;
+  top: 16px;
+  height: 8px;
   width: 80px;
   background-color: #ffc600;
 }
@@ -1853,6 +1914,8 @@ a {
   justify-content: space-between;
   width: 140px;
   margin: 0;
+  margin-left: 27px;
+  margin-top: 3px;
   padding: 0;
 
   list-style: none;
@@ -1906,7 +1969,10 @@ a {
 }
 
 .social__copyright {
+  width: 27px;
+  height: 37px;
   background-image: url(../img/logo-academy-orange.svg);
   background-repeat: no-repeat;
   background-size: 27px 34px;
+  background-position: 0 2px;
 }
