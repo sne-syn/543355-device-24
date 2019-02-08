@@ -177,10 +177,11 @@ a {
   height: 48px;
   margin-top: 8px;
   border: 1px solid #000000;
+  opacity: 0;
 }
 
 .search-form__input:focus .search-form__btn {
-
+ opacity: 1;
 }
 
 .search-form__btn:hover {
@@ -618,7 +619,6 @@ a {
   margin-bottom: 51px;
 }
 
-
 .popular__item--bracelet .popular__button {
   padding-left: 43px;
 }
@@ -743,7 +743,7 @@ a {
 
 .product__item a:active::before{
   opacity: 0.2;
-  filter: alpha(opacity=40);
+  filter: alpha(opacity=20);
 }
 
 .product__title {
