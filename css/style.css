@@ -181,7 +181,7 @@ a {
 }
 
 .search-form__input:focus .search-form__btn {
- opacity: 1;
+  opacity: 1;
 }
 
 .search-form__btn:hover {
@@ -499,9 +499,9 @@ a {
   margin: 0;
 }
 
-#product-1:checked ~ .popular__controls .popular-controls__element--1::after,
-#product-2:checked ~ .popular__controls .popular-controls__element--2::after,
-#product-3:checked ~ .popular__controls .popular-controls__element--3::after {
+#product-1:checked ~ .popular__slider .popular-controls__element--1::after,
+#product-2:checked ~ .popular__slider .popular-controls__element--2::after,
+#product-3:checked ~ .popular__slider .popular-controls__element--3::after {
   content: "";
   position: absolute;
   top: 4px;
@@ -521,12 +521,10 @@ a {
   padding: 0;
   padding-left: 60px;
   padding-right: 60px;
-  padding-top: 15px;
 }
 
 .popular__item--quadrocopter {
   padding-left:32px;
-  padding-top: 14px;
   background-image: linear-gradient(to bottom,  #f7e296 130px, #ffffff 130px,  #ffffff 80%);
 }
 
@@ -1047,7 +1045,7 @@ a {
   margin-bottom: 39px;
 }
 
-.contacts__map  img{
+.contacts__map img {
   width: 560px;
   height: 221px;
   margin-left: 1px;
@@ -1059,27 +1057,69 @@ a {
   padding-left: 40px;
 }
 
+.modal {
+  box-shadow: 0 10px 20px 0 rgba(0,0,0,0.2);
+}
+
 .modal__contact {
+  position: relative;
   display: flex;
-  flex-direction: column;
-  width: 963px;
-  margin: 100px;
+  justify-content: space-around;
+  box-sizing: border-box;
+  width: 961px;
+  margin: 0 auto;
   padding: 0;
 }
 
 .modal-contact__form {
+  display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
-  width: 760px;
+  width: 762px;
+  margin-top: 95px;
+  margin-bottom: 80px;
 }
 
-.modal-contact__form input {
+.modal__field {
+  display: inline-block;
+  box-sizing: border-box;
+  vertical-align: top;
   width: 360px;
+  margin-bottom: 30px;
+}
+
+.modal__username,
+.modal__username,
+.modal-contact__form input[id="user-name"],
+.modal-contact__form input[id="user-email"] {
+  display: block;
+}
+
+.modal-contact__form input[id="user-name"],
+.modal-contact__form input[id="user-email"] {
+  width: 355px;
+  box-sizing: border-box;
+}
+
+.modal-contact__form input,
+.modal-contact__form textarea {
+  background-color: #f2f2f2;
+  border: none;
+  margin-top: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .modal-contact__form textarea {
-  width: 760px;
+  width: 762px;
+  box-sizing: border-box;
 }
 
+.modal__text {
+  margin-bottom: 20px;
+}
 
 /* .modal__map {
   margin: 0 auto;
@@ -1090,30 +1130,40 @@ a {
 } */
 
 .modal__close {
-  width: 22px;
-  height: 22px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.modal__close-btn {
+  position: relative;
+  width: 55px;
+  height: 55px;
 
   font-size: 0;
 
   border: none;
-  background-color: #ffffff;
+  background-color: #f7e296;
+  border-radius: 50%;
   cursor: pointer;
 }
 
-.modal__close::before,
-.modal__close::after {
+.modal__close-btn::before,
+.modal__close-btn::after {
   content: "";
   position: absolute;
-  width: 19px;
+  top: 25px;
+  left: 15px;
+  width: 30px;
   height: 3px;
-  background-color: #ffc600;
+  background-color: #ffffff;
 }
 
-.modal__close::before {
+.modal__close-btn::before {
   transform: rotate(45deg);
 }
 
-.modal__close::after {
+.modal__close-btn::after {
   transform: rotate(-45deg);
 }
 
@@ -2038,3 +2088,4 @@ a {
   background-size: 27px 34px;
   background-position: 0 2px;
 }
+

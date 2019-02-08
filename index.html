@@ -265,23 +265,29 @@
 
     <section class="modal modal__contact">
         <h2 class="visually-hidden">Напишите нам</h2>
+
         <form class="modal-contact__form" action="https://echo.htmlacademy.ru" method="post">
-            <label class="modal__username" for="user-name">Ваше имя:</label>
-            <input id="user-name" type="text" name="name" placeholder="Имя Фамилия">
 
-            <label class="modal__email" for="user-email">Ваш email:</label>
-            <input id="user-email" type="text" name="name" placeholder="email@example.com">
-
-            <label class="modal__text" for="comment">Текст письма:</label>
-            <textarea id="comment" name="comment" rows="10" placeholder="В свободной форме"></textarea>
+          <div class="modal__field">
+            <label class="modal__username" for="user-name">Ваше имя:
+            <input id="user-name" type="text" name="name" placeholder="Имя Фамилия"></label>
+          </div>
+          <div class="modal__field">
+            <label class="modal__email" for="user-email">Ваш email:
+            <input id="user-email" type="text" name="name" placeholder="email@example.com"></label>
+          </div>
+            <label class="modal__text" for="comment">Текст письма:
+            <textarea id="comment" name="comment" rows="10" placeholder="В свободной форме"></textarea></label>
             <button class="btn modal-contact__btn" type="submit">Отправить</button>
         </form>
-        <button class="modal__close" type="button">Закрыть</button>
+        <span class="modal__close">
+        <button class="modal__close-btn" type="button" title="Закрыть"></button>
+         </span>
     </section>
 
     <section class="modal modal__map">
         <h2 class="visually-hidden">Карта офиса по адресу улица Строителей, 15</h2>
-        <button class="modal__close" type="button">Закрыть</button>
+        <button class="modal__close" type="button" title="Закрыть"></button>
     </section>
 
 </body>
