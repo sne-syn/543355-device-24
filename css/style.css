@@ -187,14 +187,18 @@ a {
 
 .user-login__list {
   display: flex;
-  flex-direction: column;
-  flex-wrap: row;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: 280px;
+  text-align: right;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.user-menu__item a {
+.user-menu__item a,
+.user-login--active a {
   position: relative;
   text-align: left;
   font-size: 15px;
@@ -203,10 +207,8 @@ a {
   font-family: "Open Sans", Arial, sans-serif;
 }
 
-.user-menu__item--user {
-  width: 270px;
+.user-login--active {
   padding-left: 11px;
-  text-align: left;
 }
 
 .user-menu__item--compare  {
@@ -218,12 +220,9 @@ a {
   margin-right: -3px;
 }
 
-.user-menu__item a::before {
+.user-login--active a::before {
   content: "";
   position: absolute;
-}
-
-.user-menu__item--user a::before {
   top: 4px;
   left: -26px;
   width: 13px;
@@ -233,6 +232,8 @@ a {
 }
 
 .user-menu__item--compare a::before {
+  content: "";
+  position: absolute;
   top: 6px;
   left: -20px;
   width: 10px;
@@ -242,6 +243,8 @@ a {
 }
 
 .user-menu__item--cart a::before {
+  content: "";
+  position: absolute;
   top: 4px;
   left: -22px;
   width: 12px;
@@ -251,23 +254,28 @@ a {
 }
 
 .user-login--noactive a {
+  margin-left: 17px;
   color: rgba(0, 0, 0, 0.3);
 }
 
-.user-menu__item:hover a {
+.user-menu__item:hover a,
+.user-login--active:hover a {
   color: rgba(0, 0, 0, 0.6);
 }
 
-.user-menu__item:hover a::before {
+.user-menu__item:hover a::before,
+.user-login--active:hover a::before {
   opacity: 0.6;
   filter: alpha(opacity=60);
 }
 
-.user-menu__item:active a {
+.user-menu__item:active a,
+.user-login--active:active a {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.user-menu__item:active a::before {
+.user-menu__item:active a::before,
+.user-login--active:active a::before {
   opacity: 0.3;
   filter: alpha(opacity=30);
 }
@@ -1815,6 +1823,8 @@ a {
 }
 
 .user-login--active-light a::before{
+  content: "";
+  position: absolute;
   top: 4px;
   left: -23px;
   width: 13px;
@@ -1824,6 +1834,8 @@ a {
 }
 
 .user-menu__item--light-compare a::before {
+  content: "";
+  position: absolute;
   top: 5px;
   left: -19px;
   width: 10px;
@@ -1833,6 +1845,8 @@ a {
 }
 
 .user-menu__item--light-cart a::before {
+  content: "";
+  position: absolute;
   top: 4px;
   left: -22px;
   width: 12px;
