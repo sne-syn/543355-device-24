@@ -270,26 +270,42 @@
 
           <div class="modal__field">
             <label class="modal__username" for="user-name">Ваше имя:
-            <input id="user-name" type="text" name="name" placeholder="Имя Фамилия"></label>
+            <input id="user-name" type="text" name="user" placeholder="Имя Фамилия" tabindex="1"></label>
           </div>
           <div class="modal__field">
-            <label class="modal__email" for="user-email">Ваш email:
-            <input id="user-email" type="text" name="name" placeholder="email@example.com"></label>
+            <label class="modal__email" for="user-email">Ваш e-mail:
+            <input id="user-email" type="text" name="email" placeholder="email@example.com" tabindex="2"></label>
           </div>
             <label class="modal__text" for="comment">Текст письма:
-            <textarea id="comment" name="comment" rows="10" placeholder="В свободной форме"></textarea></label>
-            <button class="btn modal-contact__btn" type="submit">Отправить</button>
+            <textarea id="comment" name="comment" rows="10" placeholder="В свободной форме" tabindex="3"></textarea></label>
+            <button class="btn modal-contact__btn" type="submit" tabindex="4">Отправить</button>
         </form>
-        <span class="modal__close">
-        <button class="modal__close-btn" type="button" title="Закрыть"></button>
-         </span>
+        <button class="modal__close" type="button" title="Закрыть" tabindex="5">Закрыть</button>
     </section>
 
     <section class="modal modal__map">
         <h2 class="visually-hidden">Карта офиса по адресу улица Строителей, 15</h2>
-        <button class="modal__close" type="button" title="Закрыть"></button>
+        <button class="modal__close" type="button" title="Закрыть" tabindex="1">Закрыть</button>
     </section>
 
-</body>
+    <script>
+        var link = document.querySelector(".contacts__btn");
+        var popup = document.querySelector(".modal__contact");
+        var close = popup.querySelector(".modal__close");
+        var input = popup.querySelector("[name=user]");
 
+        link.addEventListener("click", function (evt) {
+          evt.preventDefault();
+          popup.classList.add("modal__show");
+          input.focus();
+        });
+
+        close.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        popup.classList.remove("modal__show");
+  });
+    </script>
+
+
+</body>
 </html>

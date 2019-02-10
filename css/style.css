@@ -113,7 +113,6 @@ a {
 
 .header__top {
   display: flex;
-  justify-content;
   margin: 0;
   margin-top: 1px;
   margin-bottom: 22px;
@@ -438,7 +437,7 @@ a {
 
 .popular__controls {
   position: absolute;
-  bottom: 141px;
+  bottom: 178px;
   right: 64px;
   z-index: 20;
   font-size: 0;
@@ -457,19 +456,6 @@ a {
   cursor: pointer;
 }
 
-/* .popular-controls__element::after {
-  content: "";
-  position: absolute;
-  top: 4px;
-  left: 4px;
-  z-index: 1;
-  width: 2px;
-  height: 2px;
-  background-color: transparent;
-  border: 1px solid #000000;
-  border-radius: 50%;
-} */
-
 .popular__list {
   flex-wrap: wrap;
   margin: 0;
@@ -482,8 +468,9 @@ a {
   justify-content: space-between;
   margin: 0;
   padding: 0;
-  padding-left: 60px;
+  padding-left: 59px;
   padding-right: 60px;
+  padding-bottom: 37px;
   background-image: linear-gradient(to bottom,  #f7e296 113px, #ffffff 113px,  #ffffff 80%);
 }
 
@@ -504,8 +491,8 @@ a {
 #product-3:checked ~ .popular__slider .popular-controls__element--3::after {
   content: "";
   position: absolute;
-  top: 4px;
-  left: 4px;
+  top: 3px;
+  left: 3px;
   z-index: 1;
 
   width: 2px;
@@ -521,16 +508,18 @@ a {
   padding: 0;
   padding-left: 60px;
   padding-right: 60px;
+  padding-bottom: 24px;
 }
 
 .popular__item--quadrocopter {
   padding-left:32px;
-  background-image: linear-gradient(to bottom,  #f7e296 130px, #ffffff 130px,  #ffffff 80%);
+  padding-bottom: 50px;
+  background-image: linear-gradient(to bottom,  #f7e296 113px, #ffffff 113px,  #ffffff 80%);
 }
 
 .popular__number {
   position: absolute;
-  top: 4px;
+  top: -10px;
   right: 47px;
   font-size: 180px;
   line-height: 180px;
@@ -552,7 +541,7 @@ a {
 
 .popular__item--bracelet .popular__img {
   padding-top: 16px;
-  padding-left: 57px;
+  padding-left: 55px;
 }
 
 .popular__item--quadrocopter .popular__img {
@@ -639,7 +628,7 @@ a {
   flex-wrap: wrap;
   justify-content: flex-start;
   width: 510px;
-  margin-top: 57px;
+  margin-top: 58px;
 }
 
 .table__row {
@@ -678,7 +667,7 @@ a {
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 0;
-  margin-top: 37px;
+  margin-bottom: 31px;
   padding: 0;
   min-height: 245px;
   list-style: none;
@@ -739,15 +728,29 @@ a {
   background-color: #f0c52e;
 }
 
-.product__item a:active::before{
-  opacity: 0.2;
-  filter: alpha(opacity=20);
+.product__item:hover .product__title {
+  color: #000000;
+}
+
+.product__item a:active::after {
+  content: "";
+  position: absolute;
+  bottom: 98px;
+  left: 0;
+  opacity: 0.7;
+  width: 160px;
+  height: 160px;
+  background-color: #e0b210;
+}
+
+.product__item:active .product__title {
+  color: rgba(0, 0, 0, 0.3)
 }
 
 .product__title {
   width: 160px;
   margin-top: 232px;
-  margin-bottom: 50px;
+
   font: inherit;
 }
 
@@ -772,7 +775,7 @@ a {
   margin: 0 auto;
   box-sizing: border-box;
   padding-top: 80px;
-  padding-bottom: 70px;
+  padding-bottom: 73px;
 }
 
 .formalities__slider::after {
@@ -792,25 +795,26 @@ a {
   margin: 0;
   margin-top: 7px;
   margin-bottom: 23px;
-  padding: 10px 20px;
+  padding: 8px 20px;
   text-align: left;
+
   background-image: linear-gradient(to bottom, transparent 40%,#f0c52e 40%, #f0c52e 60%, transparent 60%);
   transition: width, 0.2s ease-in;
 }
 
 .formalities__btn[for="guarantee"] {
   width: 115px;
-  margin-bottom: 21px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  margin-bottom: 26px;
+  /* padding-top: 10px;
+  padding-bottom: 10px; */
   padding-left: 25px;
   padding-right: 20px;
 }
 
 .formalities__btn[for="credit"] {
   width: 103px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  /* padding-top: 10px;
+  padding-bottom: 10px; */
   padding-left: 38px;
   padding-right: 20px;
 }
@@ -822,10 +826,14 @@ a {
   text-align: left;
   color: #f7e184;
   background-image: linear-gradient(to bottom, #000000 0%, #000000 100%);
-  width: 240px;
+  width: 277px;
   padding-top: 8px;
   padding-bottom: 8px;
   box-sizing: border-box;
+}
+
+#credit:checked ~ .formalities-slider__controls .formalities__btn[for="credit"] {
+  padding-left: 42px;
 }
 
 .formalities__list {
@@ -838,6 +846,11 @@ a {
 .formalities__item {
   position: relative;
   display: none;
+  margin-left: 121px;
+}
+
+.formalities__item--credit {
+  margin-left: 124px;
 }
 
 #delivery:checked ~ .formalities__list .formalities__item--delivery {
@@ -857,7 +870,7 @@ a {
 
 .formalities__title {
   margin: 0;
-  margin-left: 122px;
+  margin-left: 2px;
   margin-bottom: 30px;
   padding: 0;
   max-width: 460px;
@@ -865,9 +878,12 @@ a {
   line-height: 48px;
 }
 
+.formalities__item--credit .formalities__title  {
+  margin-left: 0;
+}
+
 .formalities__text {
   width: 440px;
-  margin-left: 120px;
   font-size: 15px;
   line-height: 30px;
   font-weight: 300;
@@ -879,7 +895,7 @@ a {
   content: "";
   position: absolute;
   top: 11px;
-  left: 678px;
+  left: 560px;
   z-index: 1;
   width: 136px;
   height: 164px;
@@ -890,8 +906,8 @@ a {
 .formalities__item--guarantee::before {
   content: "";
   position: absolute;
-  top: 10px;
-  left: 550px;
+  top: -8px;
+  left: 545px;
   width: 171px;
   height: 195px;
   background-image: url(../img/formalities-guarantee.svg);
@@ -901,8 +917,8 @@ a {
 .formalities__item--credit::before {
   content: "";
   position: absolute;
-  top: 10px;
-  left: 550px;
+  top: -14px;
+  left: 533px;
   width: 156px;
   height: 188px;
   background-image: url(../img/formalities-credit.svg);
@@ -1058,25 +1074,35 @@ a {
 }
 
 .modal {
+  position: fixed;
+  background-color: #ffffff;
   box-shadow: 0 10px 20px 0 rgba(0,0,0,0.2);
+  z-index: 100;
 }
 
 .modal__contact {
-  position: relative;
-  display: flex;
+  display: none;
+  top: 120px;
+  left: 50%;
   justify-content: space-around;
   box-sizing: border-box;
   width: 961px;
   margin: 0 auto;
+  margin-left: -480px;
   padding: 0;
 }
 
+.modal__show {
+  display: flex;
+}
+
 .modal-contact__form {
+
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   width: 762px;
-  margin-top: 95px;
+  margin-top: 93px;
   margin-bottom: 80px;
 }
 
@@ -1095,9 +1121,13 @@ a {
   display: block;
 }
 
+.modal__username {
+  padding-left: 3px;
+}
+
 .modal-contact__form input[id="user-name"],
 .modal-contact__form input[id="user-email"] {
-  width: 355px;
+  width: 359px;
   box-sizing: border-box;
 }
 
@@ -1105,65 +1135,86 @@ a {
 .modal-contact__form textarea {
   background-color: #f2f2f2;
   border: none;
-  margin-top: 5px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 10px;
-  padding-right: 10px;
+  margin-top: 7px;
+  padding-top: 15px;
+  margin-bottom: 2px;
+  padding-bottom: 18px;
+  padding-left: 20px;
+  padding-right: 15px;
+}
+
+.modal-contact__form input:hover,
+.modal-contact__form textarea:hover {
+  background-color: #eaeaea;
+}
+
+.modal-contact__form input:focus,
+.modal-contact__form textarea:focus {
+  background-color: #ffffff;
 }
 
 .modal-contact__form textarea {
   width: 762px;
+  height: 157px;
   box-sizing: border-box;
 }
 
 .modal__text {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  padding-left: 3px;
 }
 
-/* .modal__map {
+.modal__map {
+  display: none;
+  top: 120px;
+  left: 50%;
   margin: 0 auto;
+  margin-left: -480px;
   padding: 0;
-  width: 965px;
-  min-height: 215px;
-  background-image: url(../img/map--big.jpg)
-} */
+  width: 961px;
+  min-height: 560px;
+  box-sizing: border-box;
+  background-image: url(../img/map-modal.jpg);
+  background-position: -15px -7px;;
+}
 
 .modal__close {
   position: absolute;
-  top: 0;
-  right: 0;
-}
-
-.modal__close-btn {
-  position: relative;
+  top: 22px;
+  right: 20px;
   width: 55px;
   height: 55px;
-
   font-size: 0;
-
   border: none;
   background-color: #f7e296;
   border-radius: 50%;
   cursor: pointer;
 }
 
-.modal__close-btn::before,
-.modal__close-btn::after {
+.modal__close:hover {
+  background-color: #f0c52e;
+}
+
+.modal__close:active {
+  background-color: #faedc0;
+}
+
+.modal__close::before,
+.modal__close::after {
   content: "";
   position: absolute;
-  top: 25px;
+  top: 26px;
   left: 15px;
-  width: 30px;
-  height: 3px;
+  width: 28px;
+  height: 2px;
   background-color: #ffffff;
 }
 
-.modal__close-btn::before {
+.modal__close::before {
   transform: rotate(45deg);
 }
 
-.modal__close-btn::after {
+.modal__close::after {
   transform: rotate(-45deg);
 }
 
@@ -1177,7 +1228,17 @@ a {
   color: #464646;
 }
 
+/* .modal-contact__form input[id="user-name"],
+.modal-contact__form input[id="user-email"],
+.modal-contact__form textarea {
+  color: #464646;
+} */
+
 .modal-contact__btn {
+  letter-spacing: 4px;
+  margin-left: 2px;
+  padding-left: 35px;
+  padding-right: 30px;
   border: none;
   background-color: #ffffff;
 }
@@ -1414,7 +1475,7 @@ a {
 }
 
 .checkbox__legend {
-  margin-bottom: px;
+  margin-bottom: 0px;
 }
 
 .checkbox__field {
