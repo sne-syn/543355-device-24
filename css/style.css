@@ -1184,6 +1184,10 @@ a {
   background-color: #ffffff;
 }
 
+.modal-contact__form input:invalid {
+  background-color: #f6dada;
+}
+
 .modal-contact__form textarea {
   width: 762px;
   height: 157px;
@@ -1205,9 +1209,6 @@ a {
   width: 961px;
   min-height: 560px;
   box-sizing: border-box;
-  /* background-image: url(../img/map-modal.jpg);
-  background-position: -15px -7px;; */
-
 }
 
 .modal__map iframe {
