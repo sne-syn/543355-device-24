@@ -133,7 +133,7 @@ a {
   padding-left: 39px;
 }
 
-.search-form__input:focus {
+.search-form__input:focus{
   border: none;
   border-bottom: 2px solid #000000;
   outline: none;
@@ -179,12 +179,13 @@ a {
   opacity: 0;
 }
 
-.search-form__input:focus+.search-form__btn {
+.search-form__input:focus+.search-form__btn,
+.search-form__btn:active {
   border: 2px solid #000000;
   opacity: 1;
 }
 
-.search-form__btn:hover {
+.search-form__input:focus+.search-form__btn:hover {
   color: #ffffff;
   background-color: #000000;
   outline: none;
