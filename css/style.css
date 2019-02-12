@@ -746,6 +746,10 @@ a {
   background-color: #e0b210;
 }
 
+.product__item--reality a:active::after {
+  bottom: 122px;
+}
+
 .product__item:active .product__title {
   color: rgba(0, 0, 0, 0.3)
 }
