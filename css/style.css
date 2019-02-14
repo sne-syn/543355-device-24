@@ -1,20 +1,20 @@
 @font-face {
-  font-family: "gilroylight";
-  src: local("Gilroy Light"),
-    local("Gilroy-Light"),
-    url("../fonts/gilroylight.woff2") format("woff2");
+  font-family: "Gilroy";
+  src: local("Gilroy Light"), local("Gilroy-Light"),
+   url("../fonts/gilroylight.woff2") format("woff2"),
+   url("../fonts/gilroylight.woff") format("woff");
+  font-style: normal;
   font-weight: 300;
-  font-style: normal;
-}
+ }
 
-@font-face {
-  font-family: "gilroyextrabold";
-  src: local("Gilroy ExtraBold"),
-    local("Gilroy-ExtraBold"),
-    url("../fonts/gilroyextrabold.woff2") format("woff2");
-  font-weight: 900;
+ @font-face {
+  font-family: "Gilroy";
+  src: local("Gilroy ExtraBold"), local("Gilroy-ExtraBold"),
+   url("../fonts/gilroyextrabold.woff2") format("woff2"),
+   url("../fonts/gilroyextrabold.woff") format("woff");
   font-style: normal;
-}
+  font-weight: 800;
+ }
 
 body {
   margin: 0;
@@ -23,7 +23,7 @@ body {
   font-size: 18px;
   line-height: 24px;
   font-weight: 900;
-  font-family: "gilroyextrabold", Arial, sans-serif;
+  font-family: "Gilroy", Arial, sans-serif;
   color: #000000;
 }
 
@@ -90,25 +90,13 @@ a {
 }
 
 .inner-page .logo--black:hover {
-  color: rgba(0, 0, 0, 0.6);
+  opacity: 0.6;
+  filter: alpha(opacity=60);
 }
 
 .inner-page .logo--black:active {
-  color: rgba(0, 0, 0, 0.3);
-}
-
-.catalog__title:hover,
-.conditions__item a:hover,
-.catalog__item a:hover,
-.product__item a:hover {
-  color: rgba(0, 0, 0, 0.6);
-}
-
-.catalog__title:active,
-.conditions__item a:active,
-.catalog__item a:active,
-.product__item a:active {
-  color: rgba(0, 0, 0, 0.3);
+  opacity: 0.3;
+  filter: alpha(opacity=30);
 }
 
 .header__top {
@@ -366,16 +354,13 @@ a {
   left: -60px;
   display: flex;
   justify-content: flex-start;
+  min-height: 141px;
+  width: 1160px;
   margin: 0;
   padding: 0;
   padding-top: 10px;
-
-  height: 141px;
-  width: 1160px;
   z-index: 4;
-
   background-color: #f7e296;
-
   list-style: none;
 }
 
@@ -400,7 +385,7 @@ a {
   font-size: 15px;
   line-height: 36px;
   font-weight: 300;
-  font-family: "gilroylight", Arial, sans-serif;
+  font-family: "Gilroy", Arial, sans-serif;
   color: #000000;
 }
 
@@ -496,10 +481,8 @@ a {
   top: 3px;
   left: 3px;
   z-index: 1;
-
   width: 2px;
   height: 2px;
-
   background-color: transparent;
   border: 1px solid #000000;
   border-radius: 50%;
@@ -661,7 +644,7 @@ a {
   font-size: 36px;
   line-height: 48px;
   font-weight: 300;
-  font-family: "gilroylight", Arial, sans-serif;
+  font-family: "Gilroy", Arial, sans-serif;
 }
 
 .product__list {
@@ -746,6 +729,10 @@ a {
   background-color: #e0b210;
 }
 
+.product__item--monopode a:active::after {
+  bottom: 122px;
+}
+
 .product__item--reality a:active::after {
   bottom: 122px;
 }
@@ -776,7 +763,6 @@ a {
 }
 
 .formalities__slider {
-  position: relative;
   display: flex;
   width: 1160px;
   margin: 0 auto;
@@ -785,15 +771,6 @@ a {
   padding-bottom: 73px;
 }
 
-.formalities__slider::after {
-  content: "";
-  position: absolute;
-  bottom: 26px;
-  left: 277px;
-  width: 7px;
-  height: 319px;
-  background-color: #000000;
-}
 
 .formalities__btn {
   position: relative;
@@ -840,6 +817,7 @@ a {
 }
 
 .formalities__list {
+  position: relative;
   margin: 0;
   padding: 0;
   width: 550px;
@@ -872,6 +850,7 @@ a {
 }
 
 .formalities__title {
+  position: relative;
   margin: 0;
   margin-left: 2px;
   margin-bottom: 30px;
@@ -879,6 +858,26 @@ a {
   max-width: 460px;
   font-size: 47px;
   line-height: 48px;
+}
+
+.formalities__title::after {
+  content: "";
+  position: absolute;
+  bottom: -197px;
+  left: -123px;
+  width: 7px;
+  height: 319px;
+  background-color: #000000;
+}
+
+.formalities__item--credit .formalities__title::after {
+  content: "";
+  position: absolute;
+  bottom: -197px;
+  left: -124px;
+  width: 7px;
+  height: 319px;
+  background-color: #000000;
 }
 
 .formalities__item--credit .formalities__title  {
@@ -1305,6 +1304,7 @@ a {
   background-color: #ffffff;
 }
 
+
 .inner-page__title {
   width: 1160px;
   margin: 0 auto;
@@ -1315,7 +1315,7 @@ a {
   font-size: 47px;
   line-height: 48px;
   font-weight: 900;
-  font-family: "gilroyextrabold", Arial, sans-serif;
+  font-family: "Gilroy", Arial, sans-serif;
   letter-spacing: 1px;
   color: #000000;
 }
@@ -1400,24 +1400,27 @@ a {
 
 .content {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  width: 468px;
-  background-color: #efefef;
+  box-sizing: border-box;
+  flex-basis: 100%;
 }
 
 .filter {
   display: flex;
   flex-direction: column;
+  width: 32.5%;
+  background-image: linear-gradient(to bottom, #d9d9d9 68px, #efefef 68px, #efefef 100%);
 }
 
 .content__right {
   display: flex;
   flex-direction: column;
-  width: 972px;
+  width: 67.5%;
 }
 
 .filter__title {
-  width: 468px;
+  width: 198px;
   margin: 0 auto;
   padding: 0;
   padding-top: 23px;
@@ -1427,14 +1430,12 @@ a {
   font-size: 16px;
   letter-spacing: 4px;
   text-align: center;
-  background-color: #d9d9d9;
   box-sizing: border-box;
 }
 
 .filter__form {
   width: 198px;
   margin: 0;
-  margin-left: 198px;
   margin-top: 72px;
   padding: 0;
 }
@@ -1471,7 +1472,7 @@ a {
   font-size: 14px;
   line-height: 24px;
   font-weight: 300;
-  font-family: "gilroylight", Arial, sans-serif;
+  font-family: "Gilroy", Arial, sans-serif;
   color: rgba(0, 0, 0, 0.2);
   cursor: pointer;
 }
@@ -1482,7 +1483,7 @@ a {
   font-size: 14px;
   line-height: 24px;
   font-weight: 300;
-  font-family: "gilroylight", Arial, sans-serif;
+  font-family: "Gilroy", Arial, sans-serif;
   color: rgba(0, 0, 0, 0.2);
   background-color: #eeeeee;
   border: none;
@@ -1510,10 +1511,8 @@ a {
 .range__toggle {
   position: absolute;
   top: -10px;
-
   width: 4px;
   height: 4px;
-
   background-color: #ababab;
   border: 8px solid #ffffff;
   border-radius: 50%;
@@ -1916,7 +1915,7 @@ a {
   left: 288px;
   font-size: 14px;
   line-height: 24px;
-  font-family: "gilroyextrabold", Arial, sans-serif;
+  font-family: "Gilroy", Arial, sans-serif;
   color: rgba(0, 0, 0, 0.2);
 }
 
@@ -1940,7 +1939,7 @@ a {
   font-size: 16px;
   line-height: 24px;
   font-weight: 300;
-  font-family: "gilroylight", Arial, sans-serif;
+  font-family: "Gilroy", Arial, sans-serif;
   color: #464646;
 }
 
@@ -2031,15 +2030,17 @@ a {
 
 .logo--orange {
   margin-left: -2px;
-  color: #ffc600;
+  filter: invert(84%) sepia(28%) saturate(4923%) hue-rotate(359deg) brightness(104%) contrast(104%);
 }
 
 .inner-page .logo--orange:hover {
-  color: rgba(255, 198, 0, 0.6);
+  opacity: 0.6;
+  filter: alpha(opacity=60);
 }
 
 .inner-page .logo--orange:active {
-  color: rgba(255, 198, 0, 0.3);
+  opacity: 0.3;
+  filter: alpha(opacity=30);
 }
 
 .footer .user-menu__list {
@@ -2221,6 +2222,12 @@ a {
   color: #ffffff;
 }
 
+.social__btn a {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
 .social__btn {
   display: flex;
   align-items: center;
@@ -2244,6 +2251,7 @@ a {
   opacity: 0.1;
   filter: alpha(opacity=10);
 }
+
 
 .social__btn--fb {
   background-image: url(../img/fb.svg);
