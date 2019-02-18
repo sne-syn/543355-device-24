@@ -55,6 +55,7 @@ a {
   text-transform: uppercase;
 
   background-image: linear-gradient(to bottom, transparent 40%,#f0c52e 40%, #f0c52e 60%, transparent 60%);
+  transition: 2s;
 }
 
 .btn a:hover,
@@ -2028,7 +2029,6 @@ a {
   margin-left: -2px;
   filter: invert(84%) sepia(28%) saturate(4923%) hue-rotate(359deg) brightness(104%) contrast(104%);
 }
-
 
 .inner-page .logo--orange:hover {
   opacity: 0.6;
