@@ -89,6 +89,7 @@
 			<li class="breadcrumbs__item breadcrumbs__item--current">Моноподы для селфи</li>
 		</ul>
 		<div class="content">
+      <div class="content__left">
 			<section class="filter">
 				<h3 class="filter__title">Фильтр:</h3>
 				<form action="https://echo.htmlacademy.ru" class="filter__form" method="post">
@@ -97,7 +98,7 @@
 							Стоимость
 						</div>
 						<div class="range__cell">
-							<label class="range-cell__min-price">от<input name="min-price" type="text" value="0"></label> <label class="range-cell__max-price">до <input name="max-price" type="text" value="5000"></label>
+							<label class="range-cell__min-price">от<input name="min-price" type="text" value="0"></label> <label class="range-cell__max-price">до<input name="max-price" type="text" value="5000"></label>
 						</div>
 						<div class="range__controls">
 							<div class="range__scale">
@@ -120,8 +121,10 @@
 						</div>
 					</div><button class="btn filter__btn" type="submit">Показать</button>
 				</form>
-			</section>
+      </section>
+    </div>
 			<div class="content__right">
+        <div class="content__right--wrapper">
 				<section class="sort">
 					<h3 class="sort__title">Сортировка:</h3>
 					<ul class="sort__list">
@@ -200,7 +203,8 @@
 					</ul><a class="pagination__item pagination__next" href="#">Вперед</a>
 				</div>
 			</div>
-		</div>
+    </div>
+  </div>
 	</main>
 	<footer class="footer">
 		<div class="wrapper">
