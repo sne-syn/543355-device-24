@@ -1496,9 +1496,9 @@ a {
 
 .content__right {
   flex-grow: 1;
-  background-image: -webkit-linear-gradient(top, #ebebeb 70px, #ffffff 70px, #efefef 100%);
-	background-image: -o-linear-gradient(top, #ebebeb 70px, #ffffff 70px, #efefef 100%);
-	background-image: linear-gradient(to bottom, #ebebeb 70px, #ffffff 70px, #efefef 100%);
+  background-image: -webkit-linear-gradient(top, #ebebeb 70px, #ffffff 70px, #ffffff 100%);
+	background-image: -o-linear-gradient(top, #ebebeb 70px, #ffffff 70px, #ffffff 100%);
+	background-image: linear-gradient(to bottom, #ebebeb 70px, #ffffff 70px, #ffffff 100%);
 }
 
 .content__right--wrapper {
@@ -1808,13 +1808,12 @@ a {
 	-webkit-box-pack: start;
 	-ms-flex-pack: start;
 	justify-content: flex-start;
-	width: 972px;
 	margin: 0 auto;
 	padding: 0;
 	padding-top: 21px;
 	padding-bottom: 22px;
 	padding-left: 72px;
-	background-color: #efefef;
+	/* background-color: #efefef; */
 }
 
 .sort__title {
@@ -1864,7 +1863,6 @@ a {
 .sort-btn__list {
 	width: 55px;
 	margin: 0;
-	margin-right: 90px;
 	margin-left: 216px;
 	padding: 0;
 	list-style: none;
@@ -1878,7 +1876,7 @@ a {
 	margin-right: 11px;
 	position: relative;
 	color: #fff;
-	background-color: #efefef;
+	background-color: #ebebeb;
 }
 
 .sort-btn__icon--up::before {
