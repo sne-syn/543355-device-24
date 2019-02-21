@@ -1180,198 +1180,276 @@ a {
 	padding-left: 40px;
 }
 
-.modal {
-	position: fixed;
-	display: none;
-	background-color: #ffffff;
-	-webkit-box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
-	box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
-	z-index: 20;
-}
 
-.modal__close {
-	position: absolute;
-	top: 22px;
-	right: 20px;
-	width: 55px;
-	height: 55px;
-	font-size: 0;
-	border: none;
-	background-color: #f7e296;
-	border-radius: 50%;
-	cursor: pointer;
-	z-index: 30;
-}
+@keyframes bounce {
+  0% {
+  transform: translateY(-2000px);
+  }
 
-.modal__close:hover {
-	background-color: #f0c52e;
-}
+  70% {
+  transform: translateY(30px);
+  }
 
-.modal__close:active {
-	background-color: #faedc0;
-}
+  90% {
+  transform: translateY(-10px);
+  }
 
-.modal__close::before,
-.modal__close::after {
-	content: "";
-	position: absolute;
-	top: 26px;
-	left: 14px;
-	width: 28px;
-	height: 2px;
-	background-color: #ffffff;
-}
+  100% {
+  transform: translateY(0);
+  }
+  }
 
-.modal__close::before {
-	-webkit-transform: rotate(45deg);
-	-ms-transform: rotate(45deg);
-	transform: rotate(45deg);
-}
+  @keyframes shake {
+  0%,
+  100% {
+  transform: translateX(0);
+  }
 
-.modal__close::after {
-	-webkit-transform: rotate(-45deg);
-	-ms-transform: rotate(-45deg);
-	transform: rotate(-45deg);
-}
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+  transform: translateX(-10px);
+  }
 
-.modal__map {
-	top: 120px;
-	left: 50%;
-	margin: 0 auto;
-	margin-left: -480px;
-	padding: 0;
-	width: 961px;
-	min-height: 560px;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
-}
+  20%,
+  40%,
+  60%,
+  80% {
+  transform: translateX(10px);
+  }
+  }
 
-.modal__map iframe {
-	position: relative;
-	z-index: 30;
-	border: none;
-}
 
-.modal__map p {
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: 2;
-	margin: 0;
-}
+  @keyframes bounce {
+    0% {
+    transform: translateY(-2000px);
+    }
 
-.modal__contact {
-	top: 120px;
-	left: 50%;
-	-ms-flex-pack: distribute;
-	justify-content: space-around;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
-	width: 961px;
-	margin: 0 auto;
-	margin-left: -480px;
-	padding: 0;
-}
+    70% {
+    transform: translateY(30px);
+    }
 
-.modal-contact__form {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-pack: justify;
-	-ms-flex-pack: justify;
-	justify-content: space-between;
-	-ms-flex-wrap: wrap;
-	flex-wrap: wrap;
-	width: 762px;
-	margin-top: 96px;
-	margin-bottom: 77px;
-}
+    90% {
+    transform: translateY(-10px);
+    }
 
-.modal__field {
-	display: inline-block;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
-	vertical-align: top;
-	width: 360px;
-	margin-bottom: 30px;
-}
+    100% {
+    transform: translateY(0);
+    }
+    }
 
-.modal__username,
-.modal__username,
-.modal-contact__form input[id="user-name"],
-.modal-contact__form input[id="user-email"] {
-	display: block;
-}
+    @keyframes shake {
+    0%,
+    100% {
+    transform: translateX(0);
+    }
 
-.modal__username {
-	padding-left: 3px;
-}
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+    transform: translateX(-10px);
+    }
 
-.modal-contact__form input[id="user-name"],
-.modal-contact__form input[id="user-email"] {
-	width: 359px;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
-}
+    20%,
+    40%,
+    60%,
+    80% {
+    transform: translateX(10px);
+    }
+    }
 
-.modal-contact__form input,
-.modal-contact__form textarea {
-	background-color: #f2f2f2;
-	border: none;
-	margin-top: 7px;
-	padding-top: 15px;
-	margin-bottom: 2px;
-	padding-bottom: 18px;
-	padding-left: 20px;
-	padding-right: 15px;
-}
+  .modal {
+    position: fixed;
+    display: none;
+    background-color: #ffffff;
+    box-shadow: 0 10px 20px 0 rgba(0,0,0,0.2);
+    z-index: 20;
+  }
 
-.modal-contact__form input:hover,
-.modal-contact__form textarea:hover {
-	background-color: #eaeaea;
-}
+  .modal__show {
+    display: flex;
+    animation: bounce 0.6s;
+  }
 
-.modal-contact__form input:focus,
-.modal-contact__form textarea:focus {
-	background-color: #ffffff;
-	outline: 3px solid #f7e296;
-}
+  .modal__error {
+    animation: shake 0.6s;
+  }
 
-.modal-contact__form input:invalid {
-	background-color: #f6dada;
-	border: none;
-}
 
-.modal-contact__form textarea {
-	width: 762px;
-	height: 157px;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
-}
+  .modal__close {
+    position: absolute;
+    top: 22px;
+    right: 20px;
+    width: 55px;
+    height: 55px;
+    font-size: 0;
+    border: none;
+    background-color: #f7e296;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 30;
+  }
 
-.modal__text {
-	margin-bottom: 30px;
-	padding-left: 3px;
-}
+  .modal__close:hover {
+    background-color: #f0c52e;
+  }
 
-.modal-contact__form input[id="user-name"],
-.modal-contact__form input[id="user-email"],
-.modal-contact__form textarea {
-	font-size: 14px;
-	line-height: 18px;
-	font-weight: 300;
-	font-family: "Open Sans", Arial, sans-serif;
-	color: #464646;
-}
+  .modal__close:active {
+    background-color: #faedc0;
+  }
 
-.modal-contact__btn {
-	letter-spacing: 4px;
-	margin-left: 2px;
-	padding-left: 35px;
-	padding-right: 30px;
-	border: none;
-	background-color: #ffffff;
-}
+  .modal__close::before,
+  .modal__close::after {
+    content: "";
+    position: absolute;
+    top: 26px;
+    left: 14px;
+    width: 28px;
+    height: 2px;
+    background-color: #ffffff;
+  }
+
+  .modal__close::before {
+    transform: rotate(45deg);
+  }
+
+  .modal__close::after {
+    transform: rotate(-45deg);
+  }
+
+  .modal__map {
+    top: 120px;
+    left: 50%;
+    margin: 0 auto;
+    margin-left: -480px;
+    padding: 0;
+    width: 961px;
+    min-height: 560px;
+    box-sizing: border-box;
+  }
+
+  .modal__map iframe {
+    position: relative;
+    z-index: 30;
+
+    border: none;
+  }
+
+  .modal__map p {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+
+    margin: 0;
+  }
+
+  .modal__contact {
+    top: 120px;
+    left: 50%;
+    justify-content: space-around;
+    box-sizing: border-box;
+    width: 961px;
+    margin: 0 auto;
+    margin-left: -480px;
+    padding: 0;
+  }
+
+  .modal-contact__form {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 762px;
+    margin-top: 96px;
+    margin-bottom: 77px;
+  }
+
+  .modal__field {
+    display: inline-block;
+    box-sizing: border-box;
+    vertical-align: top;
+    width: 360px;
+    margin-bottom: 30px;
+  }
+
+  .modal__username,
+  .modal__username,
+  .modal-contact__form input[id="user-name"],
+  .modal-contact__form input[id="user-email"] {
+    display: block;
+  }
+
+  .modal__username {
+    padding-left: 3px;
+  }
+
+  .modal-contact__form input[id="user-name"],
+  .modal-contact__form input[id="user-email"] {
+    width: 359px;
+    box-sizing: border-box;
+  }
+
+  .modal-contact__form input,
+  .modal-contact__form textarea {
+    background-color: #f2f2f2;
+    border: none;
+    margin-top: 7px;
+    padding-top: 15px;
+    margin-bottom: 2px;
+    padding-bottom: 18px;
+    padding-left: 20px;
+    padding-right: 15px;
+  }
+
+  .modal-contact__form input:hover,
+  .modal-contact__form textarea:hover {
+    background-color: #eaeaea;
+  }
+
+  .modal-contact__form input:focus,
+  .modal-contact__form textarea:focus {
+    background-color: #ffffff;
+    outline: 3px solid #f7e296;
+  }
+
+  .modal-contact__form input:invalid {
+    background-color: #f6dada;
+    border: none;
+  }
+
+  .modal-contact__form textarea {
+    width: 762px;
+    height: 157px;
+    box-sizing: border-box;
+  }
+
+  .modal__text {
+    margin-bottom: 30px;
+    padding-left: 3px;
+  }
+
+  .modal-contact__form input[id="user-name"],
+  .modal-contact__form input[id="user-email"],
+  .modal-contact__form textarea {
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 300;
+    font-family: "Open Sans", Arial, sans-serif;
+    color: #464646;
+  }
+
+  .modal-contact__btn {
+    letter-spacing: 4px;
+    margin-left: 2px;
+    padding-left: 35px;
+    padding-right: 30px;
+    border: none;
+    background-color: #ffffff;
+  }
 
 .inner-page__title {
 	width: 1160px;
