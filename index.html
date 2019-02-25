@@ -80,7 +80,7 @@
 			<section class="popular__slider">
 				<h2 class="visually-hidden">Популярные товары</h2>
 				<div class="popular__controls">
-					<label class="popular-controls__element popular-controls__element--1" for="product-1">Первый</label> <label class="popular-controls__element popular-controls__element--2" for="product-2">Второй</label> <label class="popular-controls__element popular-controls__element--3" for="product-3">Третий</label>
+					<label class="popular-controls__element popular-controls__element--1" for="product-1" tabindex="0">Первый</label> <label class="popular-controls__element popular-controls__element--2" for="product-2" tabindex="0">Второй</label> <label class="popular-controls__element popular-controls__element--3" for="product-3" tabindex="0">Третий</label>
 				</div>
 				<ol class="popular__list">
 					<li class="popular__item popular__item--monopode slide" id="slide1">
@@ -185,7 +185,7 @@
 			<div class="formalities__slider">
 				<input checked class="visually-hidden" id="delivery" name="slider" type="radio"> <input class="visually-hidden" id="guarantee" name="slider" type="radio"> <input class="visually-hidden" id="credit" name="slider" type="radio">
 				<div class="formalities-slider__controls">
-					<label class="btn formalities__btn" for="delivery" title="Доставка">Доставка</label> <label class="btn formalities__btn" for="guarantee" title="Гарантия">Гарантия</label> <label class="btn formalities__btn" for="credit" title="Кредит">Кредит</label>
+					<label class="btn formalities__btn" for="delivery" title="Доставка" tabindex="0">Доставка</label> <label class="btn formalities__btn" for="guarantee" title="Гарантия" tabindex="0">Гарантия</label> <label class="btn formalities__btn" for="credit" title="Кредит" tabindex="0">Кредит</label>
 				</div>
 				<ul class="formalities__list">
 					<li class="formalities__item formalities__item--delivery">
@@ -232,7 +232,9 @@
 			</section>
 			<section class="contacts">
 				<h3 class="contacts__title">Контакты</h3>
-				<p class="contacts__text">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p><a class="contacts__map"><img alt="Карта офиса по адресу улица Строителей, 15" height="220" src="img/map.png" width="560"></a> <a class="contacts__btn btn" href="writeus.html">Напишите нам</a>
+        <p class="contacts__text">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
+        <a class="contacts__map"><img alt="Карта офиса по адресу улица Строителей, 15" src="img/map.jpg" height="220" width="560" ></a>
+        <a class="contacts__btn btn" href="writeus.html">Напишите нам</a>
 			</section>
 		</div>
 	</main>
@@ -275,15 +277,16 @@
 			<div class="footer__bottom">
 				<ul class="social__list">
 					<li class="social__btn social__btn--fb">
-						<a href="#" tabindex="1"><span class="visually-hidden">Facebook</span></a>
+						<a href="#" tabindex="0"><span class="visually-hidden">Facebook</span></a>
 					</li>
 					<li class="social__btn social__btn--insta">
-						<a href="#" tabindex="2"><span class="visually-hidden">Instagram</span></a>
+						<a href="#" tabindex="0"><span class="visually-hidden">Instagram</span></a>
 					</li>
 					<li class="social__btn social__btn--tw">
-						<a href="#" tabindex="3"><span class="visually-hidden">Twitter</span></a>
+						<a href="#" tabindex="0"><span class="visually-hidden">Twitter</span></a>
 					</li>
-				</ul><a class="social__copyright" href="https://htmlacademy.ru" tabindex="4"><span class="visually-hidden">HTML Academy</span></a>
+        </ul>
+        <a class="social__copyright" href="https://htmlacademy.ru" tabindex="0"><span class="visually-hidden">HTML Academy</span></a>
 			</div>
 		</div>
 	</footer>
