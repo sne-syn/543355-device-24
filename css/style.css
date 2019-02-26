@@ -1831,8 +1831,6 @@ a {
 
 .checkbox__field {
   position: relative;
-  display: inline-block;
-  vertical-align: top;
   padding-left: 39px;
   cursor: pointer;
 }
@@ -1920,8 +1918,7 @@ a {
 
 .radio__field {
   position: relative;
-  display: inline-block;
-  vertical-align: top;
+  width: 200px;
   padding-left: 40px;
   cursor: pointer;
   outline: none;
