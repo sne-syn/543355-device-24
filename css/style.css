@@ -378,7 +378,7 @@ a {
   margin-bottom: 20px;
   width: 250px;
   font: inherit;
-  letter-spacing: 3px;
+  letter-spacing: 3.5px;
   text-transform: uppercase;
 }
 
@@ -387,7 +387,7 @@ a {
   content: "";
   position: absolute;
   top: 10px;
-  left: 222px;
+  left: 231px;
   width: 17px;
   height: 3px;
   background-color: rgba(0, 0, 0, 0.3);
@@ -408,12 +408,7 @@ a {
   position: absolute;
   top: 34px;
   left: -60px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
+  display: block;
   min-height: 141px;
   width: 1160px;
   margin: 0;
@@ -425,7 +420,9 @@ a {
 }
 
 .catalog__dropdown--part {
-  width: 200px;
+  display: inline-block;
+  vertical-align: top;
+  width: 195px;
   margin: 0;
   padding: 0;
   padding-left: 1px;
@@ -450,14 +447,6 @@ a {
 }
 
 .conditions__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
   width: 505px;
   margin: 0;
   padding: 0;
@@ -466,7 +455,6 @@ a {
 }
 
 .conditions__item a {
-  width: 130px;
   font: inherit;
   letter-spacing: 3px;
   text-align: left;
@@ -474,14 +462,20 @@ a {
 }
 
 .conditions__item:first-child {
-  margin-right: 40px;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 35px;
 }
 
 .conditions__item:nth-child(2) {
-  margin-right: 112px;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 107px;
 }
 
 .conditions__item:last-child {
+  display: inline-block;
+  vertical-align: top;
   margin-right: 0;
 }
 
@@ -752,67 +746,72 @@ a {
   -ms-flex-pack: justify;
   justify-content: space-between;
   margin: 0;
-  margin-bottom: 31px;
+  margin-bottom: 56px;
   padding: 0;
   list-style: none;
 }
 
 .product__item a {
-  position: relative;
-  margin-right: 20px;
+  display: block;
 }
 
 .product__title {
   position: relative;
+  width: 160px;
+  margin-top: 232px;
+  padding-top: 23px;
+  font: inherit;
 }
 
 .product__title::before {
   content: "";
   position: absolute;
-  bottom: 50px;
+  bottom: 57px;
   left: 0;
   width: 160px;
   height: 160px;
   background-color: #f7e296;
 }
 
-.product__item--reality a::before {
+.product__item--reality .product__title::before {
+  bottom: 81px;
   background-image: url(../img/popular-1.svg);
   background-repeat: no-repeat;
   background-position: 32px 52px;
 }
 
-.product__item--monopode a::before {
+.product__item--monopode .product__title::before {
+  bottom: 81px;
   background-image: url(../img/popular-2.svg);
   background-repeat: no-repeat;
   background-position: 39px 41px;
 }
 
-.product__item--camera a::before {
+.product__item--camera .product__title::before {
   background-image: url(../img/popular-3.svg);
   background-repeat: no-repeat;
   background-position: 50px 38px;
 }
 
-.product__item--bracelet a::before {
+.product__item--bracelet .product__title::before {
   background-image: url(../img/popular-4.svg);
   background-repeat: no-repeat;
   background-position: 30px 50px;
 }
 
-.product__item--watch a::before {
+.product__item--watch .product__title::before {
   background-image: url(../img/popular-5.svg);
   background-repeat: no-repeat;
   background-position: 56px 32px;
 }
 
-.product__item--quadrocopter a::before {
+.product__item--quadrocopter .product__title::before {
   background-image: url(../img/popular-6.svg);
   background-repeat: no-repeat;
   background-position: 15px 50px;
 }
 
-.product__item a:hover::before {
+.product__item .product__title:hover::before {
   background-color: #f0c52e;
 }
 
@@ -823,7 +822,7 @@ a {
 .product__title:active::after {
   content: "";
   position: absolute;
-  bottom: 98px;
+  bottom: 57px;
   left: 0;
   opacity: 0.7;
   filter: alpha(opacity=70);
@@ -832,30 +831,18 @@ a {
   background-color: #e0b210;
 }
 
-.product__item--monopode a:active::after {
-  bottom: 122px;
-}
-
-.product__item--reality a:active::after {
-  bottom: 122px;
+.product__item--monopode  .product__title:active::after,
+.product__item--reality .product__title:active::after {
+  bottom: 81px;
 }
 
 .product__item:active .product__title {
   color: rgba(0, 0, 0, 0.3)
 }
 
-.product__title {
-  width: 160px;
-  margin-top: 232px;
-  font: inherit;
-}
-
 .product__item--monopode .product__title {
-  width: 120px;
-}
-
-.product__item--monopode {
-  width: 160px;
+  padding-right: 50px;
+  box-sizing: border-box;
 }
 
 .formalities {
