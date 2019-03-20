@@ -5,7 +5,7 @@
 	<title>Device</title>
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans&amp;subset=cyrillic" rel="stylesheet">
 	<link href="css/normalize.css" rel="stylesheet">
-	<link href="css/style.css" rel="stylesheet">
+	<link href="css/style.min.css" rel="stylesheet">
 </head>
 <body>
 	<header class="header wrapper">
@@ -78,11 +78,15 @@
 	<main>
     <h1 class="visually-hidden">Онлайн-магазин Device</h1>
 		<div class="wrapper">
-			<input checked class="visually-hidden" id="product-1" name="toggle" type="radio"> <input class="visually-hidden" id="product-2" name="toggle" type="radio"> <input class="visually-hidden" id="product-3" name="toggle" type="radio">
+      <input checked class="visually-hidden" id="product-1" name="toggle" type="radio">
+      <input class="visually-hidden" id="product-2" name="toggle" type="radio">
+      <input class="visually-hidden" id="product-3" name="toggle" type="radio">
 			<section class="popular__slider">
 				<h2 class="visually-hidden">Популярные товары</h2>
 				<div class="popular__controls">
-					<label class="popular-controls__element popular-controls__element--1" for="product-1" tabindex="0">Первый</label> <label class="popular-controls__element popular-controls__element--2" for="product-2" tabindex="0">Второй</label> <label class="popular-controls__element popular-controls__element--3" for="product-3" tabindex="0">Третий</label>
+          <label class="popular-controls__element popular-controls__element--1" for="product-1" tabindex="0">Первый</label>
+          <label class="popular-controls__element popular-controls__element--2" for="product-2" tabindex="0">Второй</label>
+          <label class="popular-controls__element popular-controls__element--3" for="product-3" tabindex="0">Третий</label>
 				</div>
 				<ol class="popular__list">
 					<li class="popular__item popular__item--monopode slide" id="slide1">
@@ -158,27 +162,33 @@
 				<ul class="product__list">
 					<li class="product__item product__item--reality">
 						<a href="#">
-						<h3 class="product__title">Виртуальная реальность</h3></a>
+              <h3 class="product__title">Виртуальная реальность</h3>
+            </a>
 					</li>
 					<li class="product__item product__item--monopode">
 						<a href="catalog-item.html">
-						<h3 class="product__title">Моноподы для селфи</h3></a>
+              <h3 class="product__title">Моноподы для селфи</h3>
+            </a>
 					</li>
 					<li class="product__item product__item--camera">
 						<a href="#">
-						<h3 class="product__title">Экшн-камеры</h3></a>
+              <h3 class="product__title">Экшн-камеры</h3>
+            </a>
 					</li>
 					<li class="product__item product__item--bracelet">
 						<a href="#">
-						<h3 class="product__title">Фитнес-браслеты</h3></a>
+              <h3 class="product__title">Фитнес-браслеты</h3>
+            </a>
 					</li>
 					<li class="product__item product__item--watch">
 						<a href="#">
-						<h3 class="product__title">Умные часы</h3></a>
+              <h3 class="product__title">Умные часы</h3>
+            </a>
 					</li>
 					<li class="product__item product__item--quadrocopter">
 						<a href="#">
-						<h3 class="product__title">Квадрокоптеры</h3></a>
+              <h3 class="product__title">Квадрокоптеры</h3>
+            </a>
 					</li>
 				</ul>
 			</section>
@@ -186,9 +196,13 @@
 		<section class="formalities">
 			<h2 class="visually-hidden">Оформление товара</h2>
 			<div class="formalities__slider">
-				<input checked class="visually-hidden" id="delivery" name="slider" type="radio"> <input class="visually-hidden" id="guarantee" name="slider" type="radio"> <input class="visually-hidden" id="credit" name="slider" type="radio">
+        <input checked class="visually-hidden" id="delivery" name="slider" type="radio">
+        <input class="visually-hidden" id="guarantee" name="slider" type="radio">
+        <input class="visually-hidden" id="credit" name="slider" type="radio">
 				<div class="formalities-slider__controls">
-          <label class="btn formalities__btn" for="delivery" title="Доставка" tabindex="0">Доставка</label> <label class="btn formalities__btn" for="guarantee" title="Гарантия" tabindex="0">Гарантия</label> <label class="btn formalities__btn" for="credit" title="Кредит" tabindex="0">Кредит</label>
+          <label class="btn formalities__btn" for="delivery" title="Доставка" tabindex="0">Доставка</label>
+          <label class="btn formalities__btn" for="guarantee" title="Гарантия" tabindex="0">Гарантия</label>
+          <label class="btn formalities__btn" for="credit" title="Кредит" tabindex="0">Кредит</label>
 				</div>
 				<ul class="formalities__list">
 					<li class="formalities__item formalities__item--delivery">
@@ -236,7 +250,9 @@
 			<section class="contacts">
 				<h3 class="contacts__title">Контакты</h3>
         <p class="contacts__text">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-        <a class="contacts__map" href="img/map--big.jpg"><img alt="Карта офиса по адресу улица Строителей, 15" src="img/map.jpg" height="220" width="560"></a>
+        <a class="contacts__map" href="img/map--big.jpg">
+          <img alt="Карта офиса по адресу улица Строителей, 15" src="img/map.jpg" height="220" width="560">
+        </a>
         <a class="contacts__btn btn" href="writeus.html">Напишите нам</a>
 			</section>
 		</div>
@@ -301,13 +317,19 @@
 			</div>
 			<div class="modal__field">
 				<label class="modal__email" for="user-email">Ваш e-mail: <input id="user-email" name="email" placeholder="email@example.com" tabindex="2" type="email"></label>
-			</div><label class="modal__text" for="comment">Текст письма:
-			<textarea id="comment" name="comment" placeholder="В свободной форме" rows="10" tabindex="3"></textarea></label> <button class="btn modal-contact__btn" tabindex="4" type="submit">Отправить</button>
-		</form><button class="modal__close" tabindex="5" title="Закрыть" type="button">Закрыть</button>
+      </div>
+      <label class="modal__text" for="comment">Текст письма:
+        <textarea id="comment" name="comment" placeholder="В свободной форме" rows="10" tabindex="3"></textarea>
+      </label>
+      <button class="btn modal-contact__btn" tabindex="4" type="submit">Отправить</button>
+    </form>
+    <button class="modal__close" tabindex="5" title="Закрыть" type="button">Закрыть</button>
 	</section>
 	<section class="modal modal__map">
-		<h2 class="visually-hidden">Карта офиса по адресу улица Строителей, 15</h2><iframe allowfullscreen height="560" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426" width="961"></iframe>
-		<p><img alt="Карта офиса по адресу улица Строителей, 15" height="560" src="img/map--modal.jpg" width="961"></p><button class="modal__close" tabindex="1" title="Закрыть" type="button">Закрыть</button>
+    <h2 class="visually-hidden">Карта офиса по адресу улица Строителей, 15</h2>
+    <iframe allowfullscreen height="560" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426" width="961"></iframe>
+    <p><img alt="Карта офиса по адресу улица Строителей, 15" height="560" src="img/map--modal.jpg" width="961"></p>
+    <button class="modal__close" tabindex="1" title="Закрыть" type="button">Закрыть</button>
 	</section>
   <script src="js/scripts.min.js">
 	</script>
