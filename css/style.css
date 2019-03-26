@@ -411,7 +411,21 @@ a {
 	display: none;
 }
 
-.catalog:hover .catalog__dropdown,
+.catalog:hover .catalog__dropdown {
+	position: absolute;
+	top: 34px;
+	left: -60px;
+	display: block;
+	min-height: 141px;
+	width: 1160px;
+	margin: 0;
+	padding: 0;
+	padding-top: 21px;
+	z-index: 4;
+	background-color: #f7e296;
+	list-style: none;
+}
+
 .catalog:focus-within .catalog__dropdown {
 	position: absolute;
 	top: 34px;
@@ -485,6 +499,8 @@ a {
 	display: inline-block;
 	vertical-align: top;
 	margin-right: 0;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 }
 
 .popular__slider {
@@ -690,30 +706,13 @@ a {
 }
 
 .table {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	-ms-flex-direction: column;
-	flex-direction: column;
-	-ms-flex-wrap: wrap;
-	flex-wrap: wrap;
-	-webkit-box-pack: start;
-	-ms-flex-pack: start;
-	justify-content: flex-start;
 	width: 510px;
 	margin-top: 55px;
 }
 
 .table__row {
-	display: -webkit-inline-box;
-	display: -ms-inline-flexbox;
-	display: inline-flex;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	-ms-flex-direction: column;
-	flex-direction: column;
+	display: inline-block;
+	vertical-align: center;
 	width: 130px;
 }
 
@@ -734,14 +733,19 @@ a {
 }
 
 .table__cell {
-	-webkit-box-ordinal-group: 0;
-	-ms-flex-order: -1;
-	order: -1;
+	display: inline-block;
+	vertical-align: center;
 	margin-bottom: 6px;
 	font-size: 36px;
 	line-height: 48px;
 	font-weight: 300;
 	font-family: "Gilroy", Arial, sans-serif;
+}
+
+.table__header {
+	display: inline-block;
+	vertical-align: center;
+	text-align: left;
 }
 
 .product__list {
@@ -1824,6 +1828,13 @@ a {
 }
 
 .checkbox__field {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
 	position: relative;
 	padding-left: 39px;
 	cursor: pointer;
@@ -1911,6 +1922,13 @@ a {
 }
 
 .radio__field {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
 	position: relative;
 	width: 200px;
 	padding-left: 40px;
@@ -2158,8 +2176,14 @@ a {
 	cursor: pointer;
 }
 
-.category__hover-block:hover .category__btn,
+
 .category__hover-block:focus-within .category__btn {
+	top: 0;
+	opacity: 1;
+	background: rgba(238, 238, 238, 0.7);
+}
+
+.category__hover-block:hover .category__btn {
 	top: 0;
 	opacity: 1;
 	background: rgba(238, 238, 238, 0.7);
